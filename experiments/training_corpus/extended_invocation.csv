@@ -1154,404 +1154,404 @@
 1131,https://github.com/scikit-learn/scikit-learn,Rosna Thomas,"After installation, you can launch the test suite from outside the"
 1132,https://github.com/scikit-learn/scikit-learn,Rosna Thomas,source directory (you will need to have pytest >= 3.3.0 installed)::
 1133,https://github.com/scikit-learn/scikit-learn,Rosna Thomas,pytest sklearn
-0,https://github.com/unagiootoro/ruby-dnn,Sharad,MNIST MLP example
-1,https://github.com/unagiootoro/ruby-dnn,Sharad,model = Sequential.new
-2,https://github.com/unagiootoro/ruby-dnn,Sharad,model << InputLayer.new(784)
-3,https://github.com/unagiootoro/ruby-dnn,Sharad,model << Dense.new(256)
-4,https://github.com/unagiootoro/ruby-dnn,Sharad,model << ReLU.new
-5,https://github.com/unagiootoro/ruby-dnn,Sharad,model << Dense.new(256)
-6,https://github.com/unagiootoro/ruby-dnn,Sharad,model << ReLU.new
-7,https://github.com/unagiootoro/ruby-dnn,Sharad,model << Dense.new(10)
-8,https://github.com/unagiootoro/ruby-dnn,Sharad,"model.setup(Adam.new, SoftmaxCrossEntropy.new)"
-9,https://github.com/unagiootoro/ruby-dnn,Sharad,"model.train(x_train, y_train, 10, batch_size: 128, test: [x_test, y_test])"
-10,https://github.com/unagiootoro/ruby-dnn,Sharad,"accuracy, loss = model.evaluate(x_test, y_test)"
-11,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""accuracy: #{accuracy}"""
-12,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""loss: #{loss}"""
-13,https://github.com/unagiootoro/ruby-dnn,Sharad,When create a model with 'define by run' style:
-14,https://github.com/unagiootoro/ruby-dnn,Sharad,class MLP < Model
-15,https://github.com/unagiootoro/ruby-dnn,Sharad,def initialize
-16,https://github.com/unagiootoro/ruby-dnn,Sharad,super
-17,https://github.com/unagiootoro/ruby-dnn,Sharad,@d1 = Dense.new(256)
-18,https://github.com/unagiootoro/ruby-dnn,Sharad,@d2 = Dense.new(256)
-19,https://github.com/unagiootoro/ruby-dnn,Sharad,@d3 = Dense.new(10)
-20,https://github.com/unagiootoro/ruby-dnn,Sharad,end
-21,https://github.com/unagiootoro/ruby-dnn,Sharad,def forward(x)
-22,https://github.com/unagiootoro/ruby-dnn,Sharad,x = InputLayer.new(784).(x)
-23,https://github.com/unagiootoro/ruby-dnn,Sharad,x = @d1.(x)
-24,https://github.com/unagiootoro/ruby-dnn,Sharad,x = ReLU.(x)
-25,https://github.com/unagiootoro/ruby-dnn,Sharad,x = @d2.(x)
-26,https://github.com/unagiootoro/ruby-dnn,Sharad,x = ReLU.(x)
-27,https://github.com/unagiootoro/ruby-dnn,Sharad,x = @d3.(x)
-28,https://github.com/unagiootoro/ruby-dnn,Sharad,x
-29,https://github.com/unagiootoro/ruby-dnn,Sharad,end
-30,https://github.com/unagiootoro/ruby-dnn,Sharad,end
-31,https://github.com/unagiootoro/ruby-dnn,Sharad,model = MLP.new
-32,https://github.com/unagiootoro/ruby-dnn,Sharad,"model.train(x_train, y_train, 10, batch_size: 128, test: [x_test, y_test])"
-33,https://github.com/unagiootoro/ruby-dnn,Sharad,"accuracy, loss = model.evaluate(x_test, y_test)"
-34,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""accuracy: #{accuracy}"""
-35,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""loss: #{loss}"""
-36,https://github.com/unagiootoro/ruby-dnn,Sharad,Please refer to examples for basic usage.
-37,https://github.com/unagiootoro/ruby-dnn,Sharad,"If you want to know more detailed information, please refer to the source code."
-38,https://github.com/ankane/lightgbm,Sharad,Prep your data
-39,https://github.com/ankane/lightgbm,Sharad,"x = [[1, 2], [3, 4], [5, 6], [7, 8]]"
-40,https://github.com/ankane/lightgbm,Sharad,"y = [1, 2, 3, 4]"
-41,https://github.com/ankane/lightgbm,Sharad,Train a model
-42,https://github.com/ankane/lightgbm,Sharad,"params = {objective: ""regression""}"
-43,https://github.com/ankane/lightgbm,Sharad,"train_set = LightGBM::Dataset.new(x, label: y)"
-44,https://github.com/ankane/lightgbm,Sharad,"booster = LightGBM.train(params, train_set)"
-45,https://github.com/ankane/lightgbm,Sharad,Predict
-46,https://github.com/ankane/lightgbm,Sharad,booster.predict(x)
-47,https://github.com/ankane/lightgbm,Sharad,Save the model to a file
-48,https://github.com/ankane/lightgbm,Sharad,"booster.save_model(""model.txt"")"
-49,https://github.com/ankane/lightgbm,Sharad,Load the model from a file
-50,https://github.com/ankane/lightgbm,Sharad,"booster = LightGBM::Booster.new(model_file: ""model.txt"")"
-51,https://github.com/ankane/lightgbm,Sharad,Get the importance of features
-52,https://github.com/ankane/lightgbm,Sharad,booster.feature_importance
-53,https://github.com/ankane/lightgbm,Sharad,Early stopping
-54,https://github.com/ankane/lightgbm,Sharad,"LightGBM.train(params, train_set, valid_sets: [train_set, test_set], early_stopping_rounds: 5)"
-55,https://github.com/ankane/lightgbm,Sharad,CV
-56,https://github.com/ankane/lightgbm,Sharad,"LightGBM.cv(params, train_set, nfold: 5, verbose_eval: true)"
-57,https://github.com/ankane/lightgbm,Sharad,Scikit-Learn API
-58,https://github.com/ankane/lightgbm,Sharad,Prep your data
-59,https://github.com/ankane/lightgbm,Sharad,"x = [[1, 2], [3, 4], [5, 6], [7, 8]]"
-60,https://github.com/ankane/lightgbm,Sharad,"y = [1, 2, 3, 4]"
-61,https://github.com/ankane/lightgbm,Sharad,Train a model
-62,https://github.com/ankane/lightgbm,Sharad,model = LightGBM::Regressor.new
-63,https://github.com/ankane/lightgbm,Sharad,"model.fit(x, y)"
-64,https://github.com/ankane/lightgbm,Sharad,"For classification, use LightGBM::Classifier"
-65,https://github.com/ankane/lightgbm,Sharad,Predict
-66,https://github.com/ankane/lightgbm,Sharad,model.predict(x)
-67,https://github.com/ankane/lightgbm,Sharad,"For classification, use predict_proba for probabilities"
-68,https://github.com/ankane/lightgbm,Sharad,Save the model to a file
-69,https://github.com/ankane/lightgbm,Sharad,"model.save_model(""model.txt"")"
-70,https://github.com/ankane/lightgbm,Sharad,Load the model from a file
-71,https://github.com/ankane/lightgbm,Sharad,"model.load_model(""model.txt"")"
-72,https://github.com/ankane/lightgbm,Sharad,Get the importance of features
-73,https://github.com/ankane/lightgbm,Sharad,model.feature_importances
-74,https://github.com/ankane/lightgbm,Sharad,Early stopping
-75,https://github.com/ankane/lightgbm,Sharad,"model.fit(x, y, eval_set: [[x_test, y_test]], early_stopping_rounds: 5)"
-76,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Add the Neo4j Apache Tinkerpop implementation to your project:
-77,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Maven
-78,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<dependency>
-79,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<groupId>com.steelbridgelabs.oss</groupId>
-80,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<artifactId>neo4j-gremlin-bolt</artifactId>
-81,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<version>{version}</version>
-82,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,</dependency>
-83,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,*Please check the Maven Central for the latest version available.
-84,https://github.com/stanfordnlp/stanza,Pratheek,"To run your first Stanza pipeline, simply following these steps in your Python interactive interpreter:
+1134,https://github.com/unagiootoro/ruby-dnn,Sharad,MNIST MLP example
+1135,https://github.com/unagiootoro/ruby-dnn,Sharad,model = Sequential.new
+1136,https://github.com/unagiootoro/ruby-dnn,Sharad,model << InputLayer.new(784)
+1137,https://github.com/unagiootoro/ruby-dnn,Sharad,model << Dense.new(256)
+1138,https://github.com/unagiootoro/ruby-dnn,Sharad,model << ReLU.new
+1139,https://github.com/unagiootoro/ruby-dnn,Sharad,model << Dense.new(256)
+1140,https://github.com/unagiootoro/ruby-dnn,Sharad,model << ReLU.new
+1141,https://github.com/unagiootoro/ruby-dnn,Sharad,model << Dense.new(10)
+1142,https://github.com/unagiootoro/ruby-dnn,Sharad,"model.setup(Adam.new, SoftmaxCrossEntropy.new)"
+1143,https://github.com/unagiootoro/ruby-dnn,Sharad,"model.train(x_train, y_train, 10, batch_size: 128, test: [x_test, y_test])"
+1144,https://github.com/unagiootoro/ruby-dnn,Sharad,"accuracy, loss = model.evaluate(x_test, y_test)"
+1145,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""accuracy: #{accuracy}"""
+1146,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""loss: #{loss}"""
+1147,https://github.com/unagiootoro/ruby-dnn,Sharad,When create a model with 'define by run' style:
+1148,https://github.com/unagiootoro/ruby-dnn,Sharad,class MLP < Model
+1149,https://github.com/unagiootoro/ruby-dnn,Sharad,def initialize
+1150,https://github.com/unagiootoro/ruby-dnn,Sharad,super
+1151,https://github.com/unagiootoro/ruby-dnn,Sharad,@d1 = Dense.new(256)
+1152,https://github.com/unagiootoro/ruby-dnn,Sharad,@d2 = Dense.new(256)
+1153,https://github.com/unagiootoro/ruby-dnn,Sharad,@d3 = Dense.new(10)
+1154,https://github.com/unagiootoro/ruby-dnn,Sharad,end
+1155,https://github.com/unagiootoro/ruby-dnn,Sharad,def forward(x)
+1156,https://github.com/unagiootoro/ruby-dnn,Sharad,x = InputLayer.new(784).(x)
+1157,https://github.com/unagiootoro/ruby-dnn,Sharad,x = @d1.(x)
+1158,https://github.com/unagiootoro/ruby-dnn,Sharad,x = ReLU.(x)
+1159,https://github.com/unagiootoro/ruby-dnn,Sharad,x = @d2.(x)
+1160,https://github.com/unagiootoro/ruby-dnn,Sharad,x = ReLU.(x)
+1161,https://github.com/unagiootoro/ruby-dnn,Sharad,x = @d3.(x)
+1162,https://github.com/unagiootoro/ruby-dnn,Sharad,x
+1163,https://github.com/unagiootoro/ruby-dnn,Sharad,end
+1164,https://github.com/unagiootoro/ruby-dnn,Sharad,end
+1165,https://github.com/unagiootoro/ruby-dnn,Sharad,model = MLP.new
+1166,https://github.com/unagiootoro/ruby-dnn,Sharad,"model.train(x_train, y_train, 10, batch_size: 128, test: [x_test, y_test])"
+1167,https://github.com/unagiootoro/ruby-dnn,Sharad,"accuracy, loss = model.evaluate(x_test, y_test)"
+1168,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""accuracy: #{accuracy}"""
+1169,https://github.com/unagiootoro/ruby-dnn,Sharad,"puts ""loss: #{loss}"""
+1170,https://github.com/unagiootoro/ruby-dnn,Sharad,Please refer to examples for basic usage.
+1171,https://github.com/unagiootoro/ruby-dnn,Sharad,"If you want to know more detailed information, please refer to the source code."
+1172,https://github.com/ankane/lightgbm,Sharad,Prep your data
+1173,https://github.com/ankane/lightgbm,Sharad,"x = [[1, 2], [3, 4], [5, 6], [7, 8]]"
+1174,https://github.com/ankane/lightgbm,Sharad,"y = [1, 2, 3, 4]"
+1175,https://github.com/ankane/lightgbm,Sharad,Train a model
+1176,https://github.com/ankane/lightgbm,Sharad,"params = {objective: ""regression""}"
+1177,https://github.com/ankane/lightgbm,Sharad,"train_set = LightGBM::Dataset.new(x, label: y)"
+1178,https://github.com/ankane/lightgbm,Sharad,"booster = LightGBM.train(params, train_set)"
+1179,https://github.com/ankane/lightgbm,Sharad,Predict
+1180,https://github.com/ankane/lightgbm,Sharad,booster.predict(x)
+1181,https://github.com/ankane/lightgbm,Sharad,Save the model to a file
+1182,https://github.com/ankane/lightgbm,Sharad,"booster.save_model(""model.txt"")"
+1183,https://github.com/ankane/lightgbm,Sharad,Load the model from a file
+1184,https://github.com/ankane/lightgbm,Sharad,"booster = LightGBM::Booster.new(model_file: ""model.txt"")"
+1185,https://github.com/ankane/lightgbm,Sharad,Get the importance of features
+1186,https://github.com/ankane/lightgbm,Sharad,booster.feature_importance
+1187,https://github.com/ankane/lightgbm,Sharad,Early stopping
+1188,https://github.com/ankane/lightgbm,Sharad,"LightGBM.train(params, train_set, valid_sets: [train_set, test_set], early_stopping_rounds: 5)"
+1189,https://github.com/ankane/lightgbm,Sharad,CV
+1190,https://github.com/ankane/lightgbm,Sharad,"LightGBM.cv(params, train_set, nfold: 5, verbose_eval: true)"
+1191,https://github.com/ankane/lightgbm,Sharad,Scikit-Learn API
+1192,https://github.com/ankane/lightgbm,Sharad,Prep your data
+1193,https://github.com/ankane/lightgbm,Sharad,"x = [[1, 2], [3, 4], [5, 6], [7, 8]]"
+1194,https://github.com/ankane/lightgbm,Sharad,"y = [1, 2, 3, 4]"
+1195,https://github.com/ankane/lightgbm,Sharad,Train a model
+1196,https://github.com/ankane/lightgbm,Sharad,model = LightGBM::Regressor.new
+1197,https://github.com/ankane/lightgbm,Sharad,"model.fit(x, y)"
+1198,https://github.com/ankane/lightgbm,Sharad,"For classification, use LightGBM::Classifier"
+1199,https://github.com/ankane/lightgbm,Sharad,Predict
+1200,https://github.com/ankane/lightgbm,Sharad,model.predict(x)
+1201,https://github.com/ankane/lightgbm,Sharad,"For classification, use predict_proba for probabilities"
+1202,https://github.com/ankane/lightgbm,Sharad,Save the model to a file
+1203,https://github.com/ankane/lightgbm,Sharad,"model.save_model(""model.txt"")"
+1204,https://github.com/ankane/lightgbm,Sharad,Load the model from a file
+1205,https://github.com/ankane/lightgbm,Sharad,"model.load_model(""model.txt"")"
+1206,https://github.com/ankane/lightgbm,Sharad,Get the importance of features
+1207,https://github.com/ankane/lightgbm,Sharad,model.feature_importances
+1208,https://github.com/ankane/lightgbm,Sharad,Early stopping
+1209,https://github.com/ankane/lightgbm,Sharad,"model.fit(x, y, eval_set: [[x_test, y_test]], early_stopping_rounds: 5)"
+1210,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Add the Neo4j Apache Tinkerpop implementation to your project:
+1211,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Maven
+1212,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<dependency>
+1213,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<groupId>com.steelbridgelabs.oss</groupId>
+1214,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<artifactId>neo4j-gremlin-bolt</artifactId>
+1215,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,<version>{version}</version>
+1216,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,</dependency>
+1217,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,*Please check the Maven Central for the latest version available.
+1218,https://github.com/stanfordnlp/stanza,Pratheek,"To run your first Stanza pipeline, simply following these steps in your Python interactive interpreter:
 
 "
-85,https://github.com/stanfordnlp/stanza,Pratheek,import stanza
-86,https://github.com/stanfordnlp/stanza,Pratheek,stanza.download('en') 
-87,https://github.com/stanfordnlp/stanza,Pratheek,nlp = stanza.Pipeline('en')
-88,https://github.com/stanfordnlp/stanza,Pratheek,doc.sentences[0].print_dependencies()
-89,https://github.com/facebookresearch/pytext,Pratheek,"For this first example, we'll train a CNN-based text-classifier that classifies text utterances, using the examples in tests/data/train_data_tiny.tsv."
-90,https://github.com/facebookresearch/pytext,Pratheek,The data and configs files can be obtained either by cloning the repository or by downloading the files manually from GitHub.
-91,https://github.com/facebookresearch/pytext,Pratheek, (pytext_venv) $ pytext train < demo/configs/docnn.json
-92,https://github.com/facebookresearch/pytext,Pratheek,"By default, the model is created in /tmp/model.pt"
-93,https://github.com/facebookresearch/pytext,Pratheek,Now you can export your model as a caffe2 net:
-94,https://github.com/facebookresearch/pytext,Pratheek, (pytext_venv) $ pytext export < demo/configs/docnn.json
-95,https://github.com/facebookresearch/pytext,Pratheek,"You can use the exported caffe2 model to predict the class of raw utterances like this:
+1219,https://github.com/stanfordnlp/stanza,Pratheek,import stanza
+1220,https://github.com/stanfordnlp/stanza,Pratheek,stanza.download('en') 
+1221,https://github.com/stanfordnlp/stanza,Pratheek,nlp = stanza.Pipeline('en')
+1222,https://github.com/stanfordnlp/stanza,Pratheek,doc.sentences[0].print_dependencies()
+1223,https://github.com/facebookresearch/pytext,Pratheek,"For this first example, we'll train a CNN-based text-classifier that classifies text utterances, using the examples in tests/data/train_data_tiny.tsv."
+1224,https://github.com/facebookresearch/pytext,Pratheek,The data and configs files can be obtained either by cloning the repository or by downloading the files manually from GitHub.
+1225,https://github.com/facebookresearch/pytext,Pratheek, (pytext_venv) $ pytext train < demo/configs/docnn.json
+1226,https://github.com/facebookresearch/pytext,Pratheek,"By default, the model is created in /tmp/model.pt"
+1227,https://github.com/facebookresearch/pytext,Pratheek,Now you can export your model as a caffe2 net:
+1228,https://github.com/facebookresearch/pytext,Pratheek, (pytext_venv) $ pytext export < demo/configs/docnn.json
+1229,https://github.com/facebookresearch/pytext,Pratheek,"You can use the exported caffe2 model to predict the class of raw utterances like this:
 
 "
-96,https://github.com/facebookresearch/pytext,Pratheek,"(pytext_venv) $ pytext --config-file demo/configs/docnn.json predict <<< '{""text"": ""create an alarm for 1:30 pm""}'"
-97,https://github.com/NicolasHug/Surprise,Pratheek,"Here is a simple example showing how you can (down)load a dataset, split it for 5-fold cross-validation, and compute the MAE and RMSE of the SVD algorithm.
+1230,https://github.com/facebookresearch/pytext,Pratheek,"(pytext_venv) $ pytext --config-file demo/configs/docnn.json predict <<< '{""text"": ""create an alarm for 1:30 pm""}'"
+1231,https://github.com/NicolasHug/Surprise,Pratheek,"Here is a simple example showing how you can (down)load a dataset, split it for 5-fold cross-validation, and compute the MAE and RMSE of the SVD algorithm.
 
 "
-98,https://github.com/NicolasHug/Surprise,Pratheek,"from surprise import SVD
+1232,https://github.com/NicolasHug/Surprise,Pratheek,"from surprise import SVD
 "
-99,https://github.com/NicolasHug/Surprise,Pratheek,from surprise import Dataset
-100,https://github.com/NicolasHug/Surprise,Pratheek,from surprise.model_selection import cross_validate
-101,https://github.com/NicolasHug/Surprise,Pratheek,# Load the movielens-100k dataset (download it if needed).
-102,https://github.com/NicolasHug/Surprise,Pratheek,data = Dataset.load_builtin('ml-100k')
-103,https://github.com/NicolasHug/Surprise,Pratheek,# Use the famous SVD algorithm.
-104,https://github.com/NicolasHug/Surprise,Pratheek,algo = SVD()
-105,https://github.com/NicolasHug/Surprise,Pratheek,# Run 5-fold cross-validation and print results.
-106,https://github.com/NicolasHug/Surprise,Pratheek,"cross_validate(algo, data, measures=['RMSE', 'MAE'], cv=5, verbose=True)"
-107,https://github.com/amitt001/delegator.py,Pratheek,Basic run functionality:
-108,https://github.com/amitt001/delegator.py,Pratheek,c = delegator.run('ls')
-109,https://github.com/amitt001/delegator.py,Pratheek,print c.out
-110,https://github.com/amitt001/delegator.py,Pratheek,"c = delegator.run('long-running-process', block=False)"
-111,https://github.com/amitt001/delegator.py,Pratheek,c.pid
-112,https://github.com/amitt001/delegator.py,Pratheek,c.block()
-113,https://github.com/amitt001/delegator.py,Pratheek,c.return_code
-114,https://github.com/amitt001/delegator.py,Pratheek,"Commands can be passed in as lists as well (e.g. ['ls', '-lrt']), for parameterization."
-115,https://github.com/amitt001/delegator.py,Pratheek,Basic chain functionality:
-116,https://github.com/amitt001/delegator.py,Pratheek,c = delegator.chain('fortune | cowsay')
-117,https://github.com/amitt001/delegator.py,Pratheek, print c.out
-118,https://github.com/amitt001/delegator.py,Pratheek,"Expect functionality is built-in too, on non-blocking commands:"
-119,https://github.com/amitt001/delegator.py,Pratheek,c.expect('Password:')
-120,https://github.com/amitt001/delegator.py,Pratheek,c.send('PASSWORD')
-121,https://github.com/amitt001/delegator.py,Pratheek,"c.block()
+1233,https://github.com/NicolasHug/Surprise,Pratheek,from surprise import Dataset
+1234,https://github.com/NicolasHug/Surprise,Pratheek,from surprise.model_selection import cross_validate
+1235,https://github.com/NicolasHug/Surprise,Pratheek,# Load the movielens-100k dataset (download it if needed).
+1236,https://github.com/NicolasHug/Surprise,Pratheek,data = Dataset.load_builtin('ml-100k')
+1237,https://github.com/NicolasHug/Surprise,Pratheek,# Use the famous SVD algorithm.
+1238,https://github.com/NicolasHug/Surprise,Pratheek,algo = SVD()
+1239,https://github.com/NicolasHug/Surprise,Pratheek,# Run 5-fold cross-validation and print results.
+1240,https://github.com/NicolasHug/Surprise,Pratheek,"cross_validate(algo, data, measures=['RMSE', 'MAE'], cv=5, verbose=True)"
+1241,https://github.com/amitt001/delegator.py,Pratheek,Basic run functionality:
+1242,https://github.com/amitt001/delegator.py,Pratheek,c = delegator.run('ls')
+1243,https://github.com/amitt001/delegator.py,Pratheek,print c.out
+1244,https://github.com/amitt001/delegator.py,Pratheek,"c = delegator.run('long-running-process', block=False)"
+1245,https://github.com/amitt001/delegator.py,Pratheek,c.pid
+1246,https://github.com/amitt001/delegator.py,Pratheek,c.block()
+1247,https://github.com/amitt001/delegator.py,Pratheek,c.return_code
+1248,https://github.com/amitt001/delegator.py,Pratheek,"Commands can be passed in as lists as well (e.g. ['ls', '-lrt']), for parameterization."
+1249,https://github.com/amitt001/delegator.py,Pratheek,Basic chain functionality:
+1250,https://github.com/amitt001/delegator.py,Pratheek,c = delegator.chain('fortune | cowsay')
+1251,https://github.com/amitt001/delegator.py,Pratheek, print c.out
+1252,https://github.com/amitt001/delegator.py,Pratheek,"Expect functionality is built-in too, on non-blocking commands:"
+1253,https://github.com/amitt001/delegator.py,Pratheek,c.expect('Password:')
+1254,https://github.com/amitt001/delegator.py,Pratheek,c.send('PASSWORD')
+1255,https://github.com/amitt001/delegator.py,Pratheek,"c.block()
 "
-122,https://github.com/amitt001/delegator.py,Pratheek,Other functions:
-123,https://github.com/amitt001/delegator.py,Pratheek,"c.kill()
+1256,https://github.com/amitt001/delegator.py,Pratheek,Other functions:
+1257,https://github.com/amitt001/delegator.py,Pratheek,"c.kill()
 "
-124,https://github.com/amitt001/delegator.py,Pratheek,"c.send('SIGTERM', signal=True)"
-125,https://github.com/amitt001/delegator.py,Pratheek,"# Only available when block=True, otherwise, use c.out."
-126,https://github.com/amitt001/delegator.py,Pratheek,c.err
-127,https://github.com/amitt001/delegator.py,Pratheek,# Direct access to pipes.
-128,https://github.com/amitt001/delegator.py,Pratheek,"c.std_err
+1258,https://github.com/amitt001/delegator.py,Pratheek,"c.send('SIGTERM', signal=True)"
+1259,https://github.com/amitt001/delegator.py,Pratheek,"# Only available when block=True, otherwise, use c.out."
+1260,https://github.com/amitt001/delegator.py,Pratheek,c.err
+1261,https://github.com/amitt001/delegator.py,Pratheek,# Direct access to pipes.
+1262,https://github.com/amitt001/delegator.py,Pratheek,"c.std_err
 "
-129,https://github.com/amitt001/delegator.py,Pratheek,"# Adjust environment variables for the command (existing will be overwritten).
+1263,https://github.com/amitt001/delegator.py,Pratheek,"# Adjust environment variables for the command (existing will be overwritten).
 "
-130,https://github.com/amitt001/delegator.py,Pratheek,"c = delegator.chain('env | grep NEWENV', env={'NEWENV': 'FOO_BAR'})"
-131,https://github.com/amitt001/delegator.py,Pratheek,c.out
-132,,,
-133,https://github.com/simbody/simbody,Yidan Zhang,
-134,https://github.com/cyverse/atmosphere,Yidan Zhang,There are several utility scripts in ./scripts. To run these:
-135,https://github.com/cyverse/atmosphere,Yidan Zhang,cd <path to atmosphere>
-136,https://github.com/cyverse/atmosphere,Yidan Zhang,export DJANGO_SETTINGS_MODULE='atmosphere.settings'
-137,https://github.com/cyverse/atmosphere,Yidan Zhang,"export PYTHONPATH=""$PWD:$PYTHONPATH"""
-138,https://github.com/cyverse/atmosphere,Yidan Zhang,python scripts/<name of script>
-139,https://github.com/darwinlau/CASPR,Yidan Zhang,"To start using CASPR, please follow the steps below"
-140,https://github.com/darwinlau/CASPR,Yidan Zhang,Navigate to the CASPR root directory folder.
-141,https://github.com/darwinlau/CASPR,Yidan Zhang,Run the script initialise_CASPR.m. This will ensure that your path libraries have been set up and should be run everytime that you use CASPR.
-142,https://github.com/darwinlau/CASPR,Yidan Zhang,Go into the script folders to look at examples or open up the CASPR GUI using the CASPR_GUI command.
-143,https://github.com/microsoft/tensorwatch,Yidan Zhang,Here's simple code that logs an integer and its square as a tuple every second to TensorWatch:
-144,https://github.com/microsoft/tensorwatch,Yidan Zhang,import tensorwatch as tw
-145,https://github.com/microsoft/tensorwatch,Yidan Zhang,import time
-146,https://github.com/microsoft/tensorwatch,Yidan Zhang,# streams will be stored in test.log file
-147,https://github.com/microsoft/tensorwatch,Yidan Zhang,w = tw.Watcher(filename='test.log')
-148,https://github.com/microsoft/tensorwatch,Yidan Zhang,# create a stream for logging
-149,https://github.com/microsoft/tensorwatch,Yidan Zhang,s = w.create_stream(name='metric1')
-150,https://github.com/microsoft/tensorwatch,Yidan Zhang,# generate Jupyter Notebook to view real-time streams
-151,https://github.com/microsoft/tensorwatch,Yidan Zhang,w.make_notebook()
-152,https://github.com/microsoft/tensorwatch,Yidan Zhang,for i in range(1000):
-153,https://github.com/microsoft/tensorwatch,Yidan Zhang,"# write x,y pair we want to log"
-154,https://github.com/microsoft/tensorwatch,Yidan Zhang,"s.write((i, i*i))"
-155,https://github.com/microsoft/tensorwatch,Yidan Zhang,time.sleep(1)
-156,https://github.com/google/TensorNetwork,Yidan Zhang,"Here, we build a simple 2 node contraction."
-157,https://github.com/google/TensorNetwork,Yidan Zhang,import numpy as np
-158,https://github.com/google/TensorNetwork,Yidan Zhang,import tensornetwork as tn
-159,https://github.com/google/TensorNetwork,Yidan Zhang,# Create the nodes
-160,https://github.com/google/TensorNetwork,Yidan Zhang,"a = tn.Node(np.ones((10,)))"
-161,https://github.com/google/TensorNetwork,Yidan Zhang,"b = tn.Node(np.ones((10,)))"
-162,https://github.com/google/TensorNetwork,Yidan Zhang,"edge = a[0] ^ b[0] # Equal to tn.connect(a[0], b[0])"
-163,https://github.com/google/TensorNetwork,Yidan Zhang,final_node = tn.contract(edge)
-164,https://github.com/google/TensorNetwork,Yidan Zhang,print(final_node.tensor) # Should print 10.0
-165,https://github.com/fastai/fastai,Ling Li,"To run the tests in parallel, launch:"
-166,https://github.com/fastai/fastai,Ling Li,nbdev_test_nbs or make test
-167,https://github.com/fastai/fastai,Ling Li,"For all the tests to pass, you'll need to install the following optional dependencies:"
-168,https://github.com/fastai/fastai,Ling Li,"pip install ""sentencepiece<0.1.90"" wandb tensorboard albumentations pydicom opencv-python scikit-image pyarrow kornia \"
-169,https://github.com/fastai/fastai,Ling Li,catalyst captum neptune-cli
-170,https://github.com/fastai/fastai,Ling Li,"Tests are written using nbdev, for example see the documentation for test_eq."
-171,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Most users do not need the OpenPose C++/Python API, but can simply use the OpenPose Demo:"
-172,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"OpenPose Demo: To easily process images/video/webcam and display/save the results. See doc/demo_overview.md. E.g., run OpenPose in a video with:"
-173,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,# Ubuntu
-174,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,./build/examples/openpose/openpose.bin --video examples/media/video.avi
-175,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,:: Windows - Portable Demo
-176,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,bin\OpenPoseDemo.exe --video examples\media\video.avi
-177,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Calibration toolbox: To easily calibrate your cameras for 3-D OpenPose or any other stereo vision task. See doc/modules/calibration_module.md.
-178,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"OpenPose C++ API: If you want to read a specific input, and/or add your custom post-processing function, and/or implement your own display/saving, check the C++ API tutorial on examples/tutorial_api_cpp/ and doc/library_introduction.md. You can create your custom code on examples/user_code/ and quickly compile it with CMake when compiling the whole OpenPose project. Quickly add your custom code: See examples/user_code/README.md for further details."
-179,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"OpenPose Python API: Analogously to the C++ API, find the tutorial for the Python API on examples/tutorial_api_python/."
-180,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Adding an extra module: Check doc/library_add_new_module.md.
-181,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Standalone face or hand detector:
-182,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Face keypoint detection without body keypoint detection: If you want to speed it up (but also reduce amount of detected faces), check the OpenCV-face-detector approach in doc/standalone_face_or_hand_keypoint_detector.md."
-183,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Use your own face/hand detector: You can use the hand and/or face keypoint detectors with your own face or hand detectors, rather than using the body detector. E.g., useful for camera views at which the hands are visible but not the body (OpenPose detector would fail). See doc/standalone_face_or_hand_keypoint_detector.md."
-184,https://github.com/deepmind/sonnet,Ling Li,Using existing modules
-185,https://github.com/deepmind/sonnet,Ling Li,Sonnet ships with a number of built in modules that you can trivially use.
-186,https://github.com/deepmind/sonnet,Ling Li,"For example to define an MLP we can use the snt.Sequential module to call a sequence of modules, passing the output of a given module as the input for the next module."
-187,https://github.com/deepmind/sonnet,Ling Li,We can use snt.Linear and tf.nn.relu to actually define our computation:
-188,https://github.com/deepmind/sonnet,Ling Li,mlp = snt.Sequential([
-189,https://github.com/deepmind/sonnet,Ling Li,"snt.Linear(1024),"
-190,https://github.com/deepmind/sonnet,Ling Li,"tf.nn.relu,"
-191,https://github.com/deepmind/sonnet,Ling Li,"snt.Linear(10),"
-192,https://github.com/deepmind/sonnet,Ling Li,])
-193,https://github.com/deepmind/sonnet,Ling Li,"To use our module we need to ""call"" it. The Sequential module (and most modules) define a __call__ method that means you can call them by name:"
-194,https://github.com/deepmind/sonnet,Ling Li,"logits = mlp(tf.random.normal([batch_size, input_size]))"
-195,https://github.com/deepmind/sonnet,Ling Li,The variables property returns all tf.Variables that are referenced by the given module:
-196,https://github.com/deepmind/sonnet,Ling Li,all_variables = mlp.variables
-197,https://github.com/deepmind/sonnet,Ling Li,model_parameters = mlp.
-198,https://github.com/deepmind/sonnet,Ling Li,Building your own module
-199,https://github.com/deepmind/sonnet,Ling Li,class MyLinear(snt.Module):
-200,https://github.com/deepmind/sonnet,Ling Li,"def __init__(self, output_size, name=None):"
-201,https://github.com/deepmind/sonnet,Ling Li,"super(MyLinear, self).__init__(name=name)"
-202,https://github.com/deepmind/sonnet,Ling Li,self.output_size = output_size
-203,https://github.com/deepmind/sonnet,Ling Li,@snt.once
-204,https://github.com/deepmind/sonnet,Ling Li,"def _initialize(self, x):"
-205,https://github.com/deepmind/sonnet,Ling Li,"initial_w = tf.random.normal([x.shape[1], self.output_size])"
-206,https://github.com/deepmind/sonnet,Ling Li,"self.w = tf.Variable(initial_w, name=""w"")"
-207,https://github.com/deepmind/sonnet,Ling Li,"self.b = tf.Variable(tf.zeros([self.output_size]), name=""b"")"
-208,https://github.com/deepmind/sonnet,Ling Li,"def __call__(self, x):"
-209,https://github.com/deepmind/sonnet,Ling Li,self._initialize(x)
-210,https://github.com/deepmind/sonnet,Ling Li,"return tf.matmul(x, self.w) + self.b"
-211,https://github.com/deepmind/sonnet,Ling Li,Using this module is trivial:
-212,https://github.com/deepmind/sonnet,Ling Li,mod = MyLinear(32)
-213,https://github.com/deepmind/sonnet,Ling Li,"mod(tf.ones([batch_size, input_size]))"
-214,https://github.com/deepmind/sonnet,Ling Li,By subclassing snt.Module you get many nice properties for free. For example a default implementation of __repr__ which shows constructor arguments (very useful for debugging and introspection):
-215,https://github.com/deepmind/sonnet,Ling Li,>>> print(repr(mod))
-216,https://github.com/deepmind/sonnet,Ling Li,MyLinear(output_size=10)
-217,https://github.com/deepmind/sonnet,Ling Li,You also get the variables and trainable_variables properties:
-218,https://github.com/deepmind/sonnet,Ling Li,>>> mod.variables
-219,https://github.com/deepmind/sonnet,Ling Li,"(<tf.Variable 'my_linear/b:0' shape=(10,) ...)>,"
-220,https://github.com/deepmind/sonnet,Ling Li,"<tf.Variable 'my_linear/w:0' shape=(1, 10) ...)>)"
-221,https://github.com/JaidedAI/EasyOCR,Ling Li,Usage
-222,https://github.com/JaidedAI/EasyOCR,Ling Li,import easyocr
-223,https://github.com/JaidedAI/EasyOCR,Ling Li,"reader = easyocr.Reader(['ch_sim','en']) # need to run only once to load model into memory"
-224,https://github.com/JaidedAI/EasyOCR,Ling Li,result = reader.readtext('chinese.jpg')
-225,https://github.com/JaidedAI/EasyOCR,Ling Li,"reader.readtext('chinese.jpg', detail = 0)"
-226,https://github.com/JaidedAI/EasyOCR,Ling Li,"In case you do not have GPU or your GPU has low memory, you can run it in CPU mode by adding gpu = False"
-227,https://github.com/JaidedAI/EasyOCR,Ling Li,"reader = easyocr.Reader(['ch_sim','en'], gpu = False)"
-228,https://github.com/JaidedAI/EasyOCR,Ling Li,Run on command line
-229,https://github.com/JaidedAI/EasyOCR,Ling Li,$ easyocr -l ch_sim en -f chinese.jpg --detail=1 --gpu=True
-230,https://github.com/airbnb/airpal,Yi Xie,Build Airpal
-231,https://github.com/airbnb/airpal,Yi Xie,We'll be using Gradle to build the back-end Java code and a Node.js-based build pipeline (Browserify and Gulp) to build the front-end Javascript code.
-232,https://github.com/airbnb/airpal,Yi Xie,"If you have node and npm installed locally, and wish to use them, simply run:"
-233,https://github.com/airbnb/airpal,Yi Xie,./gradlew clean shadowJar -Dairpal.useLocalNode
-234,https://github.com/airbnb/airpal,Yi Xie,"Otherwise, node and npm will be automatically downloaded for you by running:"
-235,https://github.com/airbnb/airpal,Yi Xie,./gradlew clean shadowJar
-236,https://github.com/airbnb/airpal,Yi Xie,Specify Presto version by -Dairpal.prestoVersion:
-237,https://github.com/airbnb/airpal,Yi Xie,./gradlew -Dairpal.prestoVersion=0.145 clean shadowJar
-238,https://github.com/airbnb/airpal,Yi Xie,Create a MySQL database for Airpal. We recommend you call it airpal and will assume that for future steps.
-239,https://github.com/airbnb/airpal,Yi Xie,Create a reference.yml file to store your configuration options.
-240,https://github.com/airbnb/airpal,Yi Xie,"Start by copying over the example configuration, reference.example.yml."
-241,https://github.com/airbnb/airpal,Yi Xie,cp reference.example.yml reference.yml
-242,https://github.com/airbnb/airpal,Yi Xie,"Then edit it to specify your MySQL credentials, and your S3 credentials if using S3 as a storage layer (Airpal defaults to local file storage, for demonstration purposes)."
-243,https://github.com/airbnb/airpal,Yi Xie,Migrate your database.
-244,https://github.com/airbnb/airpal,Yi Xie,java -Duser.timezone=UTC \
-245,https://github.com/airbnb/airpal,Yi Xie,-cp build/libs/airpal-*-all.jar com.airbnb.airpal.AirpalApplication db migrate reference.yml
-246,https://github.com/airbnb/airpal,Yi Xie,Run Airpal.
-247,https://github.com/airbnb/airpal,Yi Xie,java -server \
-248,https://github.com/airbnb/airpal,Yi Xie,-Duser.timezone=UTC \
-249,https://github.com/airbnb/airpal,Yi Xie,-cp build/libs/airpal-*-all.jar com.airbnb.airpal.AirpalApplication server reference.yml
-250,https://github.com/airbnb/airpal,Yi Xie,"Visit Airpal. Assuming you used the default settings in reference.yml you can now open http://localhost:8081to use Airpal. Note that you might have to change the host, depending on where you deployed it."
-251,https://github.com/airbnb/airpal,Yi Xie,"Note: To override the configuration specified in reference.yml, you may specify certain settings on the command line in the traditional Dropwizard fashion, like so:"
-252,https://github.com/airbnb/airpal,Yi Xie,java -Ddw.prestoCoordinator=http://presto-coordinator-url.com \
-253,https://github.com/airbnb/airpal,Yi Xie,-Ddw.s3AccessKey=$ACCESS_KEY \
-254,https://github.com/airbnb/airpal,Yi Xie,-Ddw.s3SecretKey=$SECRET_KEY \
-255,https://github.com/airbnb/airpal,Yi Xie,-Ddw.s3Bucket=airpal \
-256,https://github.com/airbnb/airpal,Yi Xie,-Ddw.dataSourceFactory.url=jdbc:mysql://127.0.0.1:3306/airpal \
-257,https://github.com/airbnb/airpal,Yi Xie,-Ddw.dataSourceFactory.user=airpal \
-258,https://github.com/airbnb/airpal,Yi Xie,-Ddw.dataSourceFactory.password=$YOUR_PASSWORD \
-259,https://github.com/airbnb/airpal,Yi Xie,-Duser.timezone=UTC \
-260,https://github.com/airbnb/airpal,Yi Xie,-cp build/libs/airpal-*-all.jar db migrate reference.yml
-261,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Templates
-262,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Templates are pre-built visualizations for common use-cases.
-263,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Example:
-264,https://github.com/HumbleSoftware/envisionjs,Yi Xie,var
-265,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"container = document.getElementById('container'),"
-266,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"x = [],"
-267,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y1 = [],"
-268,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y2 = [],"
-269,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data, options, i;"
-270,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Data Format:
-271,https://github.com/HumbleSoftware/envisionjs,Yi Xie,data = [
-272,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y1], // First Series"
-273,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y2]  // Second Series"
-274,https://github.com/HumbleSoftware/envisionjs,Yi Xie,];
-275,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Sample the sine function for data
-276,https://github.com/HumbleSoftware/envisionjs,Yi Xie,for (i = 0; i < 4 * Math.PI; i += 0.05) {
-277,https://github.com/HumbleSoftware/envisionjs,Yi Xie,x.push(i);
-278,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y1.push(Math.sin(i));
-279,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y2.push(Math.sin(i + Math.PI));
-280,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
-281,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// TimeSeries Template Options
-282,https://github.com/HumbleSoftware/envisionjs,Yi Xie,options = {
-283,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Container to render inside of
-284,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"container : container,"
-285,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Data for detail (top chart) and summary (bottom chart)
-286,https://github.com/HumbleSoftware/envisionjs,Yi Xie,data : {
-287,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"detail : data,"
-288,https://github.com/HumbleSoftware/envisionjs,Yi Xie,summary : data
-289,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
-290,https://github.com/HumbleSoftware/envisionjs,Yi Xie,};
-291,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Create the TimeSeries
-292,https://github.com/HumbleSoftware/envisionjs,Yi Xie,new envision.templates.TimeSeries(options);
-293,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Custom
-294,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Developers can use the envision APIs to build custom visualizations. The existing templates are a good reference for this.
-295,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Example:
-296,https://github.com/HumbleSoftware/envisionjs,Yi Xie,var
-297,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"container = document.getElementById('container'),"
-298,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"x = [],"
-299,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y1 = [],"
-300,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y2 = [],"
-301,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data, i,"
-302,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"detail, detailOptions,"
-303,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"summary, summaryOptions,"
-304,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"vis, selection,"
-305,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Data Format:
-306,https://github.com/HumbleSoftware/envisionjs,Yi Xie,data = [
-307,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y1], // First Series"
-308,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y2]  // Second Series"
-309,https://github.com/HumbleSoftware/envisionjs,Yi Xie,];
-310,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Sample the sine function for data
-311,https://github.com/HumbleSoftware/envisionjs,Yi Xie,for (i = 0; i < 4 * Math.PI; i += 0.05) {
-312,https://github.com/HumbleSoftware/envisionjs,Yi Xie,x.push(i);
-313,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y1.push(Math.sin(i));
-314,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y2.push(Math.sin(i + Math.PI));
-315,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
-316,https://github.com/HumbleSoftware/envisionjs,Yi Xie,x.push(4 * Math.PI)
-317,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y1.push(Math.sin(4 * Math.PI));
-318,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y2.push(Math.sin(4 * Math.PI));
-319,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Configuration for detail:
-320,https://github.com/HumbleSoftware/envisionjs,Yi Xie,detailOptions = {
-321,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"name : 'detail',"
-322,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data : data,"
-323,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"height : 150,"
-324,https://github.com/HumbleSoftware/envisionjs,Yi Xie,flotr : {
-325,https://github.com/HumbleSoftware/envisionjs,Yi Xie,yaxis : {
-326,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"min : -1.1,"
-327,https://github.com/HumbleSoftware/envisionjs,Yi Xie,max : 1.1
-328,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
-329,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
-330,https://github.com/HumbleSoftware/envisionjs,Yi Xie,};
-331,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Configuration for summary:
-332,https://github.com/HumbleSoftware/envisionjs,Yi Xie,summaryOptions = {
-333,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"name : 'summary',"
-334,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data : data,"
-335,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"height : 150,"
-336,https://github.com/HumbleSoftware/envisionjs,Yi Xie,flotr : {
-337,https://github.com/HumbleSoftware/envisionjs,Yi Xie,yaxis : {
-338,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"min : -1.1,"
-339,https://github.com/HumbleSoftware/envisionjs,Yi Xie,max : 1.1
-340,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"},"
-341,https://github.com/HumbleSoftware/envisionjs,Yi Xie,selection : {
-342,https://github.com/HumbleSoftware/envisionjs,Yi Xie,mode : 'x'
-343,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
-344,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
-345,https://github.com/HumbleSoftware/envisionjs,Yi Xie,};
-346,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Building a custom vis:
-347,https://github.com/HumbleSoftware/envisionjs,Yi Xie,vis = new envision.Visualization();
-348,https://github.com/HumbleSoftware/envisionjs,Yi Xie,detail = new envision.Component(detailOptions);
-349,https://github.com/HumbleSoftware/envisionjs,Yi Xie,summary = new envision.Component(summaryOptions);
-350,https://github.com/HumbleSoftware/envisionjs,Yi Xie,interaction = new envision.Interaction();
-351,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Render Visualization
-352,https://github.com/HumbleSoftware/envisionjs,Yi Xie,vis
-353,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.add(detail)
-354,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.add(summary)
-355,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.render(container);
-356,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Wireup Interaction
-357,https://github.com/HumbleSoftware/envisionjs,Yi Xie,interaction
-358,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.leader(summary)
-359,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.follower(detail)
-360,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.add(envision.actions.selection);
-361,https://github.com/apache/incubator-echarts,Yi Xie,Build echarts source code:
-362,https://github.com/apache/incubator-echarts,Yi Xie,Execute the instructions in the root directory of the echarts: (Node.js is required)
-363,https://github.com/apache/incubator-echarts,Yi Xie,# Install the dependencies from NPM:
-364,https://github.com/apache/incubator-echarts,Yi Xie,npm install
-365,https://github.com/apache/incubator-echarts,Yi Xie,"# If intending to build and get all types of the ""production"" files:"
-366,https://github.com/apache/incubator-echarts,Yi Xie,npm run release
-367,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js --release`
-368,https://github.com/apache/incubator-echarts,Yi Xie,"# If only intending to get `dist/echarts.js`, which is usually"
-369,https://github.com/apache/incubator-echarts,Yi Xie,# enough in dev or running the tests:
-370,https://github.com/apache/incubator-echarts,Yi Xie,npm run build
-371,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js`
-372,https://github.com/apache/incubator-echarts,Yi Xie,"# Get the same ""production"" files as `node build/build.js`, while"
-373,https://github.com/apache/incubator-echarts,Yi Xie,# watching the editing of the source code. Usually used in dev.
-374,https://github.com/apache/incubator-echarts,Yi Xie,npm run watch
-375,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js -w`
-376,https://github.com/apache/incubator-echarts,Yi Xie,# Check the manual:
-377,https://github.com/apache/incubator-echarts,Yi Xie,npm run help
-378,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js --help`
-379,https://github.com/apache/incubator-echarts,Yi Xie,"Then the ""production"" files are generated in the dist directory."
-380,https://github.com/apache/incubator-echarts,Yi Xie,More custom build approaches can be checked in this tutorial: Create Custom Build of ECharts please.
-381,https://github.com/Codecademy/EventHub,Yi Xie,Compile and run
-382,https://github.com/Codecademy/EventHub,Yi Xie,# set up proper JAVA_HOME for mac
-383,https://github.com/Codecademy/EventHub,Yi Xie,export JAVA_HOME=$(/usr/libexec/java_home)
-384,https://github.com/Codecademy/EventHub,Yi Xie,git clone https://github.com/Codecademy/EventHub.git
-385,https://github.com/Codecademy/EventHub,Yi Xie,cd EventHub
-386,https://github.com/Codecademy/EventHub,Yi Xie,export EVENT_HUB_DIR=`pwd`
-387,https://github.com/Codecademy/EventHub,Yi Xie,mvn -am -pl web clean package
-388,https://github.com/Codecademy/EventHub,Yi Xie,java -jar web/target/web-1.0-SNAPSHOT.jar
-389,https://github.com/vega/vega,Yi Xie,
+1264,https://github.com/amitt001/delegator.py,Pratheek,"c = delegator.chain('env | grep NEWENV', env={'NEWENV': 'FOO_BAR'})"
+1265,https://github.com/amitt001/delegator.py,Pratheek,c.out
+1266,,,
+1267,https://github.com/simbody/simbody,Yidan Zhang,
+1268,https://github.com/cyverse/atmosphere,Yidan Zhang,There are several utility scripts in ./scripts. To run these:
+1269,https://github.com/cyverse/atmosphere,Yidan Zhang,cd <path to atmosphere>
+1270,https://github.com/cyverse/atmosphere,Yidan Zhang,export DJANGO_SETTINGS_MODULE='atmosphere.settings'
+1271,https://github.com/cyverse/atmosphere,Yidan Zhang,"export PYTHONPATH=""$PWD:$PYTHONPATH"""
+1272,https://github.com/cyverse/atmosphere,Yidan Zhang,python scripts/<name of script>
+1273,https://github.com/darwinlau/CASPR,Yidan Zhang,"To start using CASPR, please follow the steps below"
+1274,https://github.com/darwinlau/CASPR,Yidan Zhang,Navigate to the CASPR root directory folder.
+1275,https://github.com/darwinlau/CASPR,Yidan Zhang,Run the script initialise_CASPR.m. This will ensure that your path libraries have been set up and should be run everytime that you use CASPR.
+1276,https://github.com/darwinlau/CASPR,Yidan Zhang,Go into the script folders to look at examples or open up the CASPR GUI using the CASPR_GUI command.
+1277,https://github.com/microsoft/tensorwatch,Yidan Zhang,Here's simple code that logs an integer and its square as a tuple every second to TensorWatch:
+1278,https://github.com/microsoft/tensorwatch,Yidan Zhang,import tensorwatch as tw
+1279,https://github.com/microsoft/tensorwatch,Yidan Zhang,import time
+1280,https://github.com/microsoft/tensorwatch,Yidan Zhang,# streams will be stored in test.log file
+1281,https://github.com/microsoft/tensorwatch,Yidan Zhang,w = tw.Watcher(filename='test.log')
+1282,https://github.com/microsoft/tensorwatch,Yidan Zhang,# create a stream for logging
+1283,https://github.com/microsoft/tensorwatch,Yidan Zhang,s = w.create_stream(name='metric1')
+1284,https://github.com/microsoft/tensorwatch,Yidan Zhang,# generate Jupyter Notebook to view real-time streams
+1285,https://github.com/microsoft/tensorwatch,Yidan Zhang,w.make_notebook()
+1286,https://github.com/microsoft/tensorwatch,Yidan Zhang,for i in range(1000):
+1287,https://github.com/microsoft/tensorwatch,Yidan Zhang,"# write x,y pair we want to log"
+1288,https://github.com/microsoft/tensorwatch,Yidan Zhang,"s.write((i, i*i))"
+1289,https://github.com/microsoft/tensorwatch,Yidan Zhang,time.sleep(1)
+1290,https://github.com/google/TensorNetwork,Yidan Zhang,"Here, we build a simple 2 node contraction."
+1291,https://github.com/google/TensorNetwork,Yidan Zhang,import numpy as np
+1292,https://github.com/google/TensorNetwork,Yidan Zhang,import tensornetwork as tn
+1293,https://github.com/google/TensorNetwork,Yidan Zhang,# Create the nodes
+1294,https://github.com/google/TensorNetwork,Yidan Zhang,"a = tn.Node(np.ones((10,)))"
+1295,https://github.com/google/TensorNetwork,Yidan Zhang,"b = tn.Node(np.ones((10,)))"
+1296,https://github.com/google/TensorNetwork,Yidan Zhang,"edge = a[0] ^ b[0] # Equal to tn.connect(a[0], b[0])"
+1297,https://github.com/google/TensorNetwork,Yidan Zhang,final_node = tn.contract(edge)
+1298,https://github.com/google/TensorNetwork,Yidan Zhang,print(final_node.tensor) # Should print 10.0
+1299,https://github.com/fastai/fastai,Ling Li,"To run the tests in parallel, launch:"
+1300,https://github.com/fastai/fastai,Ling Li,nbdev_test_nbs or make test
+1301,https://github.com/fastai/fastai,Ling Li,"For all the tests to pass, you'll need to install the following optional dependencies:"
+1302,https://github.com/fastai/fastai,Ling Li,"pip install ""sentencepiece<0.1.90"" wandb tensorboard albumentations pydicom opencv-python scikit-image pyarrow kornia \"
+1303,https://github.com/fastai/fastai,Ling Li,catalyst captum neptune-cli
+1304,https://github.com/fastai/fastai,Ling Li,"Tests are written using nbdev, for example see the documentation for test_eq."
+1305,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Most users do not need the OpenPose C++/Python API, but can simply use the OpenPose Demo:"
+1306,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"OpenPose Demo: To easily process images/video/webcam and display/save the results. See doc/demo_overview.md. E.g., run OpenPose in a video with:"
+1307,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,# Ubuntu
+1308,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,./build/examples/openpose/openpose.bin --video examples/media/video.avi
+1309,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,:: Windows - Portable Demo
+1310,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,bin\OpenPoseDemo.exe --video examples\media\video.avi
+1311,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Calibration toolbox: To easily calibrate your cameras for 3-D OpenPose or any other stereo vision task. See doc/modules/calibration_module.md.
+1312,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"OpenPose C++ API: If you want to read a specific input, and/or add your custom post-processing function, and/or implement your own display/saving, check the C++ API tutorial on examples/tutorial_api_cpp/ and doc/library_introduction.md. You can create your custom code on examples/user_code/ and quickly compile it with CMake when compiling the whole OpenPose project. Quickly add your custom code: See examples/user_code/README.md for further details."
+1313,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"OpenPose Python API: Analogously to the C++ API, find the tutorial for the Python API on examples/tutorial_api_python/."
+1314,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Adding an extra module: Check doc/library_add_new_module.md.
+1315,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Standalone face or hand detector:
+1316,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Face keypoint detection without body keypoint detection: If you want to speed it up (but also reduce amount of detected faces), check the OpenCV-face-detector approach in doc/standalone_face_or_hand_keypoint_detector.md."
+1317,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Use your own face/hand detector: You can use the hand and/or face keypoint detectors with your own face or hand detectors, rather than using the body detector. E.g., useful for camera views at which the hands are visible but not the body (OpenPose detector would fail). See doc/standalone_face_or_hand_keypoint_detector.md."
+1318,https://github.com/deepmind/sonnet,Ling Li,Using existing modules
+1319,https://github.com/deepmind/sonnet,Ling Li,Sonnet ships with a number of built in modules that you can trivially use.
+1320,https://github.com/deepmind/sonnet,Ling Li,"For example to define an MLP we can use the snt.Sequential module to call a sequence of modules, passing the output of a given module as the input for the next module."
+1321,https://github.com/deepmind/sonnet,Ling Li,We can use snt.Linear and tf.nn.relu to actually define our computation:
+1322,https://github.com/deepmind/sonnet,Ling Li,mlp = snt.Sequential([
+1323,https://github.com/deepmind/sonnet,Ling Li,"snt.Linear(1024),"
+1324,https://github.com/deepmind/sonnet,Ling Li,"tf.nn.relu,"
+1325,https://github.com/deepmind/sonnet,Ling Li,"snt.Linear(10),"
+1326,https://github.com/deepmind/sonnet,Ling Li,])
+1327,https://github.com/deepmind/sonnet,Ling Li,"To use our module we need to ""call"" it. The Sequential module (and most modules) define a __call__ method that means you can call them by name:"
+1328,https://github.com/deepmind/sonnet,Ling Li,"logits = mlp(tf.random.normal([batch_size, input_size]))"
+1329,https://github.com/deepmind/sonnet,Ling Li,The variables property returns all tf.Variables that are referenced by the given module:
+1330,https://github.com/deepmind/sonnet,Ling Li,all_variables = mlp.variables
+1331,https://github.com/deepmind/sonnet,Ling Li,model_parameters = mlp.
+1332,https://github.com/deepmind/sonnet,Ling Li,Building your own module
+1333,https://github.com/deepmind/sonnet,Ling Li,class MyLinear(snt.Module):
+1334,https://github.com/deepmind/sonnet,Ling Li,"def __init__(self, output_size, name=None):"
+1335,https://github.com/deepmind/sonnet,Ling Li,"super(MyLinear, self).__init__(name=name)"
+1336,https://github.com/deepmind/sonnet,Ling Li,self.output_size = output_size
+1337,https://github.com/deepmind/sonnet,Ling Li,@snt.once
+1338,https://github.com/deepmind/sonnet,Ling Li,"def _initialize(self, x):"
+1339,https://github.com/deepmind/sonnet,Ling Li,"initial_w = tf.random.normal([x.shape[1], self.output_size])"
+1340,https://github.com/deepmind/sonnet,Ling Li,"self.w = tf.Variable(initial_w, name=""w"")"
+1341,https://github.com/deepmind/sonnet,Ling Li,"self.b = tf.Variable(tf.zeros([self.output_size]), name=""b"")"
+1342,https://github.com/deepmind/sonnet,Ling Li,"def __call__(self, x):"
+1343,https://github.com/deepmind/sonnet,Ling Li,self._initialize(x)
+1344,https://github.com/deepmind/sonnet,Ling Li,"return tf.matmul(x, self.w) + self.b"
+1345,https://github.com/deepmind/sonnet,Ling Li,Using this module is trivial:
+1346,https://github.com/deepmind/sonnet,Ling Li,mod = MyLinear(32)
+1347,https://github.com/deepmind/sonnet,Ling Li,"mod(tf.ones([batch_size, input_size]))"
+1348,https://github.com/deepmind/sonnet,Ling Li,By subclassing snt.Module you get many nice properties for free. For example a default implementation of __repr__ which shows constructor arguments (very useful for debugging and introspection):
+1349,https://github.com/deepmind/sonnet,Ling Li,>>> print(repr(mod))
+1350,https://github.com/deepmind/sonnet,Ling Li,MyLinear(output_size=10)
+1351,https://github.com/deepmind/sonnet,Ling Li,You also get the variables and trainable_variables properties:
+1352,https://github.com/deepmind/sonnet,Ling Li,>>> mod.variables
+1353,https://github.com/deepmind/sonnet,Ling Li,"(<tf.Variable 'my_linear/b:0' shape=(10,) ...)>,"
+1354,https://github.com/deepmind/sonnet,Ling Li,"<tf.Variable 'my_linear/w:0' shape=(1, 10) ...)>)"
+1355,https://github.com/JaidedAI/EasyOCR,Ling Li,Usage
+1356,https://github.com/JaidedAI/EasyOCR,Ling Li,import easyocr
+1357,https://github.com/JaidedAI/EasyOCR,Ling Li,"reader = easyocr.Reader(['ch_sim','en']) # need to run only once to load model into memory"
+1358,https://github.com/JaidedAI/EasyOCR,Ling Li,result = reader.readtext('chinese.jpg')
+1359,https://github.com/JaidedAI/EasyOCR,Ling Li,"reader.readtext('chinese.jpg', detail = 0)"
+1360,https://github.com/JaidedAI/EasyOCR,Ling Li,"In case you do not have GPU or your GPU has low memory, you can run it in CPU mode by adding gpu = False"
+1361,https://github.com/JaidedAI/EasyOCR,Ling Li,"reader = easyocr.Reader(['ch_sim','en'], gpu = False)"
+1362,https://github.com/JaidedAI/EasyOCR,Ling Li,Run on command line
+1363,https://github.com/JaidedAI/EasyOCR,Ling Li,$ easyocr -l ch_sim en -f chinese.jpg --detail=1 --gpu=True
+1364,https://github.com/airbnb/airpal,Yi Xie,Build Airpal
+1365,https://github.com/airbnb/airpal,Yi Xie,We'll be using Gradle to build the back-end Java code and a Node.js-based build pipeline (Browserify and Gulp) to build the front-end Javascript code.
+1366,https://github.com/airbnb/airpal,Yi Xie,"If you have node and npm installed locally, and wish to use them, simply run:"
+1367,https://github.com/airbnb/airpal,Yi Xie,./gradlew clean shadowJar -Dairpal.useLocalNode
+1368,https://github.com/airbnb/airpal,Yi Xie,"Otherwise, node and npm will be automatically downloaded for you by running:"
+1369,https://github.com/airbnb/airpal,Yi Xie,./gradlew clean shadowJar
+1370,https://github.com/airbnb/airpal,Yi Xie,Specify Presto version by -Dairpal.prestoVersion:
+1371,https://github.com/airbnb/airpal,Yi Xie,./gradlew -Dairpal.prestoVersion=0.145 clean shadowJar
+1372,https://github.com/airbnb/airpal,Yi Xie,Create a MySQL database for Airpal. We recommend you call it airpal and will assume that for future steps.
+1373,https://github.com/airbnb/airpal,Yi Xie,Create a reference.yml file to store your configuration options.
+1374,https://github.com/airbnb/airpal,Yi Xie,"Start by copying over the example configuration, reference.example.yml."
+1375,https://github.com/airbnb/airpal,Yi Xie,cp reference.example.yml reference.yml
+1376,https://github.com/airbnb/airpal,Yi Xie,"Then edit it to specify your MySQL credentials, and your S3 credentials if using S3 as a storage layer (Airpal defaults to local file storage, for demonstration purposes)."
+1377,https://github.com/airbnb/airpal,Yi Xie,Migrate your database.
+1378,https://github.com/airbnb/airpal,Yi Xie,java -Duser.timezone=UTC \
+1379,https://github.com/airbnb/airpal,Yi Xie,-cp build/libs/airpal-*-all.jar com.airbnb.airpal.AirpalApplication db migrate reference.yml
+1380,https://github.com/airbnb/airpal,Yi Xie,Run Airpal.
+1381,https://github.com/airbnb/airpal,Yi Xie,java -server \
+1382,https://github.com/airbnb/airpal,Yi Xie,-Duser.timezone=UTC \
+1383,https://github.com/airbnb/airpal,Yi Xie,-cp build/libs/airpal-*-all.jar com.airbnb.airpal.AirpalApplication server reference.yml
+1384,https://github.com/airbnb/airpal,Yi Xie,"Visit Airpal. Assuming you used the default settings in reference.yml you can now open http://localhost:8081to use Airpal. Note that you might have to change the host, depending on where you deployed it."
+1385,https://github.com/airbnb/airpal,Yi Xie,"Note: To override the configuration specified in reference.yml, you may specify certain settings on the command line in the traditional Dropwizard fashion, like so:"
+1386,https://github.com/airbnb/airpal,Yi Xie,java -Ddw.prestoCoordinator=http://presto-coordinator-url.com \
+1387,https://github.com/airbnb/airpal,Yi Xie,-Ddw.s3AccessKey=$ACCESS_KEY \
+1388,https://github.com/airbnb/airpal,Yi Xie,-Ddw.s3SecretKey=$SECRET_KEY \
+1389,https://github.com/airbnb/airpal,Yi Xie,-Ddw.s3Bucket=airpal \
+1390,https://github.com/airbnb/airpal,Yi Xie,-Ddw.dataSourceFactory.url=jdbc:mysql://127.0.0.1:3306/airpal \
+1391,https://github.com/airbnb/airpal,Yi Xie,-Ddw.dataSourceFactory.user=airpal \
+1392,https://github.com/airbnb/airpal,Yi Xie,-Ddw.dataSourceFactory.password=$YOUR_PASSWORD \
+1393,https://github.com/airbnb/airpal,Yi Xie,-Duser.timezone=UTC \
+1394,https://github.com/airbnb/airpal,Yi Xie,-cp build/libs/airpal-*-all.jar db migrate reference.yml
+1395,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Templates
+1396,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Templates are pre-built visualizations for common use-cases.
+1397,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Example:
+1398,https://github.com/HumbleSoftware/envisionjs,Yi Xie,var
+1399,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"container = document.getElementById('container'),"
+1400,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"x = [],"
+1401,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y1 = [],"
+1402,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y2 = [],"
+1403,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data, options, i;"
+1404,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Data Format:
+1405,https://github.com/HumbleSoftware/envisionjs,Yi Xie,data = [
+1406,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y1], // First Series"
+1407,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y2]  // Second Series"
+1408,https://github.com/HumbleSoftware/envisionjs,Yi Xie,];
+1409,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Sample the sine function for data
+1410,https://github.com/HumbleSoftware/envisionjs,Yi Xie,for (i = 0; i < 4 * Math.PI; i += 0.05) {
+1411,https://github.com/HumbleSoftware/envisionjs,Yi Xie,x.push(i);
+1412,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y1.push(Math.sin(i));
+1413,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y2.push(Math.sin(i + Math.PI));
+1414,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
+1415,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// TimeSeries Template Options
+1416,https://github.com/HumbleSoftware/envisionjs,Yi Xie,options = {
+1417,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Container to render inside of
+1418,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"container : container,"
+1419,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Data for detail (top chart) and summary (bottom chart)
+1420,https://github.com/HumbleSoftware/envisionjs,Yi Xie,data : {
+1421,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"detail : data,"
+1422,https://github.com/HumbleSoftware/envisionjs,Yi Xie,summary : data
+1423,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
+1424,https://github.com/HumbleSoftware/envisionjs,Yi Xie,};
+1425,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Create the TimeSeries
+1426,https://github.com/HumbleSoftware/envisionjs,Yi Xie,new envision.templates.TimeSeries(options);
+1427,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Custom
+1428,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Developers can use the envision APIs to build custom visualizations. The existing templates are a good reference for this.
+1429,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Example:
+1430,https://github.com/HumbleSoftware/envisionjs,Yi Xie,var
+1431,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"container = document.getElementById('container'),"
+1432,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"x = [],"
+1433,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y1 = [],"
+1434,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"y2 = [],"
+1435,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data, i,"
+1436,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"detail, detailOptions,"
+1437,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"summary, summaryOptions,"
+1438,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"vis, selection,"
+1439,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Data Format:
+1440,https://github.com/HumbleSoftware/envisionjs,Yi Xie,data = [
+1441,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y1], // First Series"
+1442,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"[x, y2]  // Second Series"
+1443,https://github.com/HumbleSoftware/envisionjs,Yi Xie,];
+1444,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Sample the sine function for data
+1445,https://github.com/HumbleSoftware/envisionjs,Yi Xie,for (i = 0; i < 4 * Math.PI; i += 0.05) {
+1446,https://github.com/HumbleSoftware/envisionjs,Yi Xie,x.push(i);
+1447,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y1.push(Math.sin(i));
+1448,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y2.push(Math.sin(i + Math.PI));
+1449,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
+1450,https://github.com/HumbleSoftware/envisionjs,Yi Xie,x.push(4 * Math.PI)
+1451,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y1.push(Math.sin(4 * Math.PI));
+1452,https://github.com/HumbleSoftware/envisionjs,Yi Xie,y2.push(Math.sin(4 * Math.PI));
+1453,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Configuration for detail:
+1454,https://github.com/HumbleSoftware/envisionjs,Yi Xie,detailOptions = {
+1455,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"name : 'detail',"
+1456,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data : data,"
+1457,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"height : 150,"
+1458,https://github.com/HumbleSoftware/envisionjs,Yi Xie,flotr : {
+1459,https://github.com/HumbleSoftware/envisionjs,Yi Xie,yaxis : {
+1460,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"min : -1.1,"
+1461,https://github.com/HumbleSoftware/envisionjs,Yi Xie,max : 1.1
+1462,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
+1463,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
+1464,https://github.com/HumbleSoftware/envisionjs,Yi Xie,};
+1465,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Configuration for summary:
+1466,https://github.com/HumbleSoftware/envisionjs,Yi Xie,summaryOptions = {
+1467,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"name : 'summary',"
+1468,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"data : data,"
+1469,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"height : 150,"
+1470,https://github.com/HumbleSoftware/envisionjs,Yi Xie,flotr : {
+1471,https://github.com/HumbleSoftware/envisionjs,Yi Xie,yaxis : {
+1472,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"min : -1.1,"
+1473,https://github.com/HumbleSoftware/envisionjs,Yi Xie,max : 1.1
+1474,https://github.com/HumbleSoftware/envisionjs,Yi Xie,"},"
+1475,https://github.com/HumbleSoftware/envisionjs,Yi Xie,selection : {
+1476,https://github.com/HumbleSoftware/envisionjs,Yi Xie,mode : 'x'
+1477,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
+1478,https://github.com/HumbleSoftware/envisionjs,Yi Xie,}
+1479,https://github.com/HumbleSoftware/envisionjs,Yi Xie,};
+1480,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Building a custom vis:
+1481,https://github.com/HumbleSoftware/envisionjs,Yi Xie,vis = new envision.Visualization();
+1482,https://github.com/HumbleSoftware/envisionjs,Yi Xie,detail = new envision.Component(detailOptions);
+1483,https://github.com/HumbleSoftware/envisionjs,Yi Xie,summary = new envision.Component(summaryOptions);
+1484,https://github.com/HumbleSoftware/envisionjs,Yi Xie,interaction = new envision.Interaction();
+1485,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Render Visualization
+1486,https://github.com/HumbleSoftware/envisionjs,Yi Xie,vis
+1487,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.add(detail)
+1488,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.add(summary)
+1489,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.render(container);
+1490,https://github.com/HumbleSoftware/envisionjs,Yi Xie,// Wireup Interaction
+1491,https://github.com/HumbleSoftware/envisionjs,Yi Xie,interaction
+1492,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.leader(summary)
+1493,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.follower(detail)
+1494,https://github.com/HumbleSoftware/envisionjs,Yi Xie,.add(envision.actions.selection);
+1495,https://github.com/apache/incubator-echarts,Yi Xie,Build echarts source code:
+1496,https://github.com/apache/incubator-echarts,Yi Xie,Execute the instructions in the root directory of the echarts: (Node.js is required)
+1497,https://github.com/apache/incubator-echarts,Yi Xie,# Install the dependencies from NPM:
+1498,https://github.com/apache/incubator-echarts,Yi Xie,npm install
+1499,https://github.com/apache/incubator-echarts,Yi Xie,"# If intending to build and get all types of the ""production"" files:"
+1500,https://github.com/apache/incubator-echarts,Yi Xie,npm run release
+1501,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js --release`
+1502,https://github.com/apache/incubator-echarts,Yi Xie,"# If only intending to get `dist/echarts.js`, which is usually"
+1503,https://github.com/apache/incubator-echarts,Yi Xie,# enough in dev or running the tests:
+1504,https://github.com/apache/incubator-echarts,Yi Xie,npm run build
+1505,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js`
+1506,https://github.com/apache/incubator-echarts,Yi Xie,"# Get the same ""production"" files as `node build/build.js`, while"
+1507,https://github.com/apache/incubator-echarts,Yi Xie,# watching the editing of the source code. Usually used in dev.
+1508,https://github.com/apache/incubator-echarts,Yi Xie,npm run watch
+1509,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js -w`
+1510,https://github.com/apache/incubator-echarts,Yi Xie,# Check the manual:
+1511,https://github.com/apache/incubator-echarts,Yi Xie,npm run help
+1512,https://github.com/apache/incubator-echarts,Yi Xie,# The same as `node build/build.js --help`
+1513,https://github.com/apache/incubator-echarts,Yi Xie,"Then the ""production"" files are generated in the dist directory."
+1514,https://github.com/apache/incubator-echarts,Yi Xie,More custom build approaches can be checked in this tutorial: Create Custom Build of ECharts please.
+1515,https://github.com/Codecademy/EventHub,Yi Xie,Compile and run
+1516,https://github.com/Codecademy/EventHub,Yi Xie,# set up proper JAVA_HOME for mac
+1517,https://github.com/Codecademy/EventHub,Yi Xie,export JAVA_HOME=$(/usr/libexec/java_home)
+1518,https://github.com/Codecademy/EventHub,Yi Xie,git clone https://github.com/Codecademy/EventHub.git
+1519,https://github.com/Codecademy/EventHub,Yi Xie,cd EventHub
+1520,https://github.com/Codecademy/EventHub,Yi Xie,export EVENT_HUB_DIR=`pwd`
+1521,https://github.com/Codecademy/EventHub,Yi Xie,mvn -am -pl web clean package
+1522,https://github.com/Codecademy/EventHub,Yi Xie,java -jar web/target/web-1.0-SNAPSHOT.jar
+1523,https://github.com/vega/vega,Yi Xie,

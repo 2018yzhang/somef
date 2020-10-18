@@ -928,189 +928,189 @@
 926,https://github.com/tensorflow/magenta,Rosna Thomas,"After you've trained one of the models above, you can use our MIDI interface to play with it interactively."
 927,https://github.com/tensorflow/magenta,Rosna Thomas,"We also have created several demos that provide a UI for this interface, making it easier to use (e.g., the browser-based AI Jam)."
 928,https://github.com/tensorflow/magenta,Rosna Thomas,Development Environment
-0,https://github.com/RaRe-Technologies/gensim,Pratheek,"This software depends on NumPy and Scipy, two Python packages for scientific computing. You must have them installed prior to installing gensim.
+929,https://github.com/RaRe-Technologies/gensim,Pratheek,"This software depends on NumPy and Scipy, two Python packages for scientific computing. You must have them installed prior to installing gensim.
 
 "
-1,https://github.com/RaRe-Technologies/gensim,Pratheek,It is also recommended you install a fast BLAS library before installing NumPy.
-2,https://github.com/RaRe-Technologies/gensim,Pratheek,"This is optional, but using an optimized BLAS such as ATLAS or OpenBLAS is known to improve performance by as much as an order of magnitude."
-3,https://github.com/RaRe-Technologies/gensim,Pratheek,"On OS X, NumPy picks up the BLAS that comes with it automatically, so you don’t need to do anything special."
-4,https://github.com/RaRe-Technologies/gensim,Pratheek,Install the latest version of gensim:
-5,https://github.com/RaRe-Technologies/gensim,Pratheek,pip install --upgrade gensim
-6,https://github.com/RaRe-Technologies/gensim,Pratheek,"Or, if you have instead downloaded and unzipped the source tar.gz package:"
-7,https://github.com/RaRe-Technologies/gensim,Pratheek, python setup.py install
-8,https://github.com/stanfordnlp/stanza,Pratheek,Stanza supports Python 3.6 or later.
-9,https://github.com/stanfordnlp/stanza,Pratheek,"We recommend that you install Stanza via pip, the Python package manager."
-10,https://github.com/stanfordnlp/stanza,Pratheek,"To install, simply run:"
-11,https://github.com/stanfordnlp/stanza,Pratheek,pip install stanza
-12,https://github.com/stanfordnlp/stanza,Pratheek,"This should also help resolve all of the dependencies of Stanza, for instance PyTorch 1.3.0 or above."
-13,https://github.com/stanfordnlp/stanza,Pratheek,"If you currently have a previous version of stanza installed, use:
+930,https://github.com/RaRe-Technologies/gensim,Pratheek,It is also recommended you install a fast BLAS library before installing NumPy.
+931,https://github.com/RaRe-Technologies/gensim,Pratheek,"This is optional, but using an optimized BLAS such as ATLAS or OpenBLAS is known to improve performance by as much as an order of magnitude."
+932,https://github.com/RaRe-Technologies/gensim,Pratheek,"On OS X, NumPy picks up the BLAS that comes with it automatically, so you don’t need to do anything special."
+933,https://github.com/RaRe-Technologies/gensim,Pratheek,Install the latest version of gensim:
+934,https://github.com/RaRe-Technologies/gensim,Pratheek,pip install --upgrade gensim
+935,https://github.com/RaRe-Technologies/gensim,Pratheek,"Or, if you have instead downloaded and unzipped the source tar.gz package:"
+936,https://github.com/RaRe-Technologies/gensim,Pratheek, python setup.py install
+937,https://github.com/stanfordnlp/stanza,Pratheek,Stanza supports Python 3.6 or later.
+938,https://github.com/stanfordnlp/stanza,Pratheek,"We recommend that you install Stanza via pip, the Python package manager."
+939,https://github.com/stanfordnlp/stanza,Pratheek,"To install, simply run:"
+940,https://github.com/stanfordnlp/stanza,Pratheek,pip install stanza
+941,https://github.com/stanfordnlp/stanza,Pratheek,"This should also help resolve all of the dependencies of Stanza, for instance PyTorch 1.3.0 or above."
+942,https://github.com/stanfordnlp/stanza,Pratheek,"If you currently have a previous version of stanza installed, use:
 
 "
-14,https://github.com/stanfordnlp/stanza,Pratheek,pip install stanza -U
-15,https://github.com/stanfordnlp/stanza,Pratheek,"To install Stanza via Anaconda, use the following conda command:
+943,https://github.com/stanfordnlp/stanza,Pratheek,pip install stanza -U
+944,https://github.com/stanfordnlp/stanza,Pratheek,"To install Stanza via Anaconda, use the following conda command:
 
 "
-16,https://github.com/stanfordnlp/stanza,Pratheek,conda install -c stanfordnlp stanza
-17,https://github.com/stanfordnlp/stanza,Pratheek,"Alternatively, you can also install from source of this git repository, which will give you more flexibility in developing on top of Stanza."
-18,https://github.com/stanfordnlp/stanza,Pratheek,"For this option, run"
-19,https://github.com/stanfordnlp/stanza,Pratheek,git clone https://github.com/stanfordnlp/stanza.git
-20,https://github.com/stanfordnlp/stanza,Pratheek,cd stanza
-21,https://github.com/stanfordnlp/stanza,Pratheek,pip install -e .
-22,https://github.com/unagiootoro/ruby-dnn,Sharad,Add this line to your application's Gemfile:
-23,https://github.com/unagiootoro/ruby-dnn,Sharad,gem 'ruby-dnn'
-24,https://github.com/unagiootoro/ruby-dnn,Sharad,And then execute:
-25,https://github.com/unagiootoro/ruby-dnn,Sharad,$ bundle
-26,https://github.com/unagiootoro/ruby-dnn,Sharad,Or install it yourself as:
-27,https://github.com/unagiootoro/ruby-dnn,Sharad,$ gem install ruby-dnn
-28,https://github.com/ankane/lightgbm,Sharad,Add this line to your application’s Gemfile:
-29,https://github.com/ankane/lightgbm,Sharad,gem 'lightgbm'
-30,https://github.com/ankane/lightgbm,Sharad,"On Mac, also install OpenMP:"
-31,https://github.com/ankane/lightgbm,Sharad,brew install libomp
-32,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Requirements
-33,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Java 8.
-34,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Maven 3.0.0 or newer.
-35,https://github.com/LaurentRDC/scikit-ued,Sharad,scikit-ued is available on PyPI; it can be installed with pip:
-36,https://github.com/LaurentRDC/scikit-ued,Sharad,python -m pip install scikit-ued
-37,https://github.com/LaurentRDC/scikit-ued,Sharad,scikit-ued is also available on the conda-forge channel for the conda package manager:
-38,https://github.com/LaurentRDC/scikit-ued,Sharad,conda config --add channels conda-forge
-39,https://github.com/LaurentRDC/scikit-ued,Sharad,conda install scikit-ued
-40,https://github.com/LaurentRDC/scikit-ued,Sharad,To install the latest development version from Github:
-41,https://github.com/LaurentRDC/scikit-ued,Sharad,python -m pip install git+git://github.com/LaurentRDC/scikit-ued.git
-42,https://github.com/LaurentRDC/scikit-ued,Sharad,After installing scikit-ued you can use it like any other Python module as skued.
-43,https://github.com/LaurentRDC/scikit-ued,Sharad,Each version is tested against Python 3.6+.
-44,https://github.com/LaurentRDC/scikit-ued,Sharad,"If you are using a different version, tests can be run using the standard library's unittest module."
-45,https://github.com/treeverse/lakeFS,Sharad,Getting Started
-46,https://github.com/treeverse/lakeFS,Sharad,"Docker (MacOS, Linux)"
-47,https://github.com/treeverse/lakeFS,Sharad,Ensure you have Docker & Docker Compose installed on your computer.
-48,https://github.com/treeverse/lakeFS,Sharad,Run the following command:
-49,https://github.com/treeverse/lakeFS,Sharad,curl https://compose.lakefs.io | docker-compose -f - up
-50,https://github.com/treeverse/lakeFS,Sharad,"Open http://127.0.0.1:8000/setup in your web browser to set up an initial admin user, used to login and send API requests."
-51,https://github.com/treeverse/lakeFS,Sharad,Docker (Windows)
-52,https://github.com/treeverse/lakeFS,Sharad,Ensure you have Docker installed.
-53,https://github.com/treeverse/lakeFS,Sharad,Run the following command in PowerShell:
-54,https://github.com/treeverse/lakeFS,Sharad,Invoke-WebRequest https://compose.lakefs.io | Select-Object -ExpandProperty Content | docker-compose -f - up
-55,https://github.com/treeverse/lakeFS,Sharad,"Open http://127.0.0.1:8000/setup in your web browser to set up an initial admin user, used to login and send API requests."
-56,https://github.com/treeverse/lakeFS,Sharad,Download the Binary
-57,https://github.com/treeverse/lakeFS,Sharad,"Alternatively, you can download the lakeFS binaries and run them directly."
-58,https://github.com/treeverse/lakeFS,Sharad,Binaries are available at https://github.com/treeverse/lakeFS/releases.
-59,https://github.com/treeverse/lakeFS,Sharad,Setting up a repository
-60,https://github.com/treeverse/lakeFS,Sharad,Please follow the Guide to Get Started to set up your local lakeFS installation.
-61,https://github.com/treeverse/lakeFS,Sharad,"For more detailed information on how to set up lakeFS, please visit the documentation."
-62,https://github.com/facebookresearch/pytext,Pratheek,PyText requires Python 3.6.1 or above.
-63,https://github.com/facebookresearch/pytext,Pratheek,"To get started on a Cloud VM, check out our guide.
+945,https://github.com/stanfordnlp/stanza,Pratheek,conda install -c stanfordnlp stanza
+946,https://github.com/stanfordnlp/stanza,Pratheek,"Alternatively, you can also install from source of this git repository, which will give you more flexibility in developing on top of Stanza."
+947,https://github.com/stanfordnlp/stanza,Pratheek,"For this option, run"
+948,https://github.com/stanfordnlp/stanza,Pratheek,git clone https://github.com/stanfordnlp/stanza.git
+949,https://github.com/stanfordnlp/stanza,Pratheek,cd stanza
+950,https://github.com/stanfordnlp/stanza,Pratheek,pip install -e .
+951,https://github.com/unagiootoro/ruby-dnn,Sharad,Add this line to your application's Gemfile:
+952,https://github.com/unagiootoro/ruby-dnn,Sharad,gem 'ruby-dnn'
+953,https://github.com/unagiootoro/ruby-dnn,Sharad,And then execute:
+954,https://github.com/unagiootoro/ruby-dnn,Sharad,$ bundle
+955,https://github.com/unagiootoro/ruby-dnn,Sharad,Or install it yourself as:
+956,https://github.com/unagiootoro/ruby-dnn,Sharad,$ gem install ruby-dnn
+957,https://github.com/ankane/lightgbm,Sharad,Add this line to your application’s Gemfile:
+958,https://github.com/ankane/lightgbm,Sharad,gem 'lightgbm'
+959,https://github.com/ankane/lightgbm,Sharad,"On Mac, also install OpenMP:"
+960,https://github.com/ankane/lightgbm,Sharad,brew install libomp
+961,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Requirements
+962,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Java 8.
+963,https://github.com/SteelBridgeLabs/neo4j-gremlin-bolt,Sharad,Maven 3.0.0 or newer.
+964,https://github.com/LaurentRDC/scikit-ued,Sharad,scikit-ued is available on PyPI; it can be installed with pip:
+965,https://github.com/LaurentRDC/scikit-ued,Sharad,python -m pip install scikit-ued
+966,https://github.com/LaurentRDC/scikit-ued,Sharad,scikit-ued is also available on the conda-forge channel for the conda package manager:
+967,https://github.com/LaurentRDC/scikit-ued,Sharad,conda config --add channels conda-forge
+968,https://github.com/LaurentRDC/scikit-ued,Sharad,conda install scikit-ued
+969,https://github.com/LaurentRDC/scikit-ued,Sharad,To install the latest development version from Github:
+970,https://github.com/LaurentRDC/scikit-ued,Sharad,python -m pip install git+git://github.com/LaurentRDC/scikit-ued.git
+971,https://github.com/LaurentRDC/scikit-ued,Sharad,After installing scikit-ued you can use it like any other Python module as skued.
+972,https://github.com/LaurentRDC/scikit-ued,Sharad,Each version is tested against Python 3.6+.
+973,https://github.com/LaurentRDC/scikit-ued,Sharad,"If you are using a different version, tests can be run using the standard library's unittest module."
+974,https://github.com/treeverse/lakeFS,Sharad,Getting Started
+975,https://github.com/treeverse/lakeFS,Sharad,"Docker (MacOS, Linux)"
+976,https://github.com/treeverse/lakeFS,Sharad,Ensure you have Docker & Docker Compose installed on your computer.
+977,https://github.com/treeverse/lakeFS,Sharad,Run the following command:
+978,https://github.com/treeverse/lakeFS,Sharad,curl https://compose.lakefs.io | docker-compose -f - up
+979,https://github.com/treeverse/lakeFS,Sharad,"Open http://127.0.0.1:8000/setup in your web browser to set up an initial admin user, used to login and send API requests."
+980,https://github.com/treeverse/lakeFS,Sharad,Docker (Windows)
+981,https://github.com/treeverse/lakeFS,Sharad,Ensure you have Docker installed.
+982,https://github.com/treeverse/lakeFS,Sharad,Run the following command in PowerShell:
+983,https://github.com/treeverse/lakeFS,Sharad,Invoke-WebRequest https://compose.lakefs.io | Select-Object -ExpandProperty Content | docker-compose -f - up
+984,https://github.com/treeverse/lakeFS,Sharad,"Open http://127.0.0.1:8000/setup in your web browser to set up an initial admin user, used to login and send API requests."
+985,https://github.com/treeverse/lakeFS,Sharad,Download the Binary
+986,https://github.com/treeverse/lakeFS,Sharad,"Alternatively, you can download the lakeFS binaries and run them directly."
+987,https://github.com/treeverse/lakeFS,Sharad,Binaries are available at https://github.com/treeverse/lakeFS/releases.
+988,https://github.com/treeverse/lakeFS,Sharad,Setting up a repository
+989,https://github.com/treeverse/lakeFS,Sharad,Please follow the Guide to Get Started to set up your local lakeFS installation.
+990,https://github.com/treeverse/lakeFS,Sharad,"For more detailed information on how to set up lakeFS, please visit the documentation."
+991,https://github.com/facebookresearch/pytext,Pratheek,PyText requires Python 3.6.1 or above.
+992,https://github.com/facebookresearch/pytext,Pratheek,"To get started on a Cloud VM, check out our guide.
 
 "
-64,https://github.com/facebookresearch/pytext,Pratheek,"Get the source code:
+993,https://github.com/facebookresearch/pytext,Pratheek,"Get the source code:
 
 "
-65,https://github.com/facebookresearch/pytext,Pratheek,$ git clone https://github.com/facebookresearch/pytext
-66,https://github.com/facebookresearch/pytext,Pratheek,$ cd pytext
-67,https://github.com/facebookresearch/pytext,Pratheek,$ python3 -m venv pytext_venv
-68,https://github.com/facebookresearch/pytext,Pratheek,$ source pytext_venv/bin/activate
-69,https://github.com/facebookresearch/pytext,Pratheek,(pytext_venv) $ pip install pytext-nlp
-70,https://github.com/NicolasHug/Surprise,Pratheek,"With pip (you'll need numpy, and a C compiler. Windows users might prefer using conda):
+994,https://github.com/facebookresearch/pytext,Pratheek,$ git clone https://github.com/facebookresearch/pytext
+995,https://github.com/facebookresearch/pytext,Pratheek,$ cd pytext
+996,https://github.com/facebookresearch/pytext,Pratheek,$ python3 -m venv pytext_venv
+997,https://github.com/facebookresearch/pytext,Pratheek,$ source pytext_venv/bin/activate
+998,https://github.com/facebookresearch/pytext,Pratheek,(pytext_venv) $ pip install pytext-nlp
+999,https://github.com/NicolasHug/Surprise,Pratheek,"With pip (you'll need numpy, and a C compiler. Windows users might prefer using conda):
 
 "
-71,https://github.com/NicolasHug/Surprise,Pratheek,$ pip install numpy
-72,https://github.com/NicolasHug/Surprise,Pratheek,"$ pip install scikit-surprise
+1000,https://github.com/NicolasHug/Surprise,Pratheek,$ pip install numpy
+1001,https://github.com/NicolasHug/Surprise,Pratheek,"$ pip install scikit-surprise
 "
-73,https://github.com/NicolasHug/Surprise,Pratheek,"With conda:
+1002,https://github.com/NicolasHug/Surprise,Pratheek,"With conda:
 
 "
-74,https://github.com/NicolasHug/Surprise,Pratheek,"$ conda install -c conda-forge scikit-surprise
+1003,https://github.com/NicolasHug/Surprise,Pratheek,"$ conda install -c conda-forge scikit-surprise
 "
-75,https://github.com/NicolasHug/Surprise,Pratheek,"For the latest version, you can also clone the repo and build the source (you'll first need Cython and numpy):
+1004,https://github.com/NicolasHug/Surprise,Pratheek,"For the latest version, you can also clone the repo and build the source (you'll first need Cython and numpy):
 
 "
-76,https://github.com/NicolasHug/Surprise,Pratheek,$ pip install numpy cython
-77,https://github.com/NicolasHug/Surprise,Pratheek,$ git clone https://github.com/NicolasHug/surprise.git
-78,https://github.com/NicolasHug/Surprise,Pratheek,$ cd surprise
-79,https://github.com/NicolasHug/Surprise,Pratheek,$ python setup.py install
-80,https://github.com/amitt001/delegator.py,Pratheek,$ pip install delegator.py
-81,,,
-82,https://github.com/simbody/simbody,Yidan Zhang,"In this file, we provide instructions for 6 different ways of installing Simbody:"
-83,https://github.com/simbody/simbody,Yidan Zhang,Windows: build from source using Microsoft Visual Studio.
-84,https://github.com/simbody/simbody,Yidan Zhang,Linux or Mac (make): build from source using gcc or Clang with make.
-85,https://github.com/simbody/simbody,Yidan Zhang,Mac (Homebrew): automated build/install with Homebrew.
-86,https://github.com/simbody/simbody,Yidan Zhang,Ubuntu/Debian: install pre-built binaries with apt-get.
-87,https://github.com/simbody/simbody,Yidan Zhang,FreeBSD: install pre-built binaries with pkg.
-88,https://github.com/simbody/simbody,Yidan Zhang,Windows using MinGW: build from source using MinGW.
-89,https://github.com/simbody/simbody,Yidan Zhang,Windows/Mac/Linux: install pre-built binaries with the Conda package manager.
-90,https://github.com/simbody/simbody,Yidan Zhang,"If you use Linux, check Repology to see if your distribution provides a package for Simbody."
-91,https://github.com/simbody/simbody,Yidan Zhang,"These are not the only ways to install Simbody, however. For example, on a Mac, you could use CMake and Xcode."
-92,https://github.com/cyverse/atmosphere,Yidan Zhang,Install the required python packages
-93,https://github.com/cyverse/atmosphere,Yidan Zhang,pip install -r requirements.txt
-94,https://github.com/cyverse/atmosphere,Yidan Zhang,A separate environment is provided for developers
-95,https://github.com/cyverse/atmosphere,Yidan Zhang,pip install -r dev_requirements.txt
-96,https://github.com/darwinlau/CASPR,Yidan Zhang,There are two ways to download CASPR to your computer:
-97,https://github.com/darwinlau/CASPR,Yidan Zhang,[READ-ONLY ACCESS] - git clone https://github.com/darwinlau/CASPR.git
-98,https://github.com/darwinlau/CASPR,Yidan Zhang,[READ-CONTRIBUTE ACCESS] - Fork the CASPR repository onto your github account and then clone the new repository. git clone https://github.com/YOUR_USER_NAME/CASPR.git
-99,https://github.com/darwinlau/CASPR,Yidan Zhang,Note: For additional information regarding forking on github please refer to https://help.github.com/articles/fork-a-repo/
-100,https://github.com/darwinlau/CASPR,Yidan Zhang,(Optionally) install the CASPR depedencies. See Dependency Installation for further details
-101,https://github.com/darwinlau/CASPR,Yidan Zhang,Open MATLAB and change the file path to be that of the extracted CASPR root directory.
-102,https://github.com/darwinlau/CASPR,Yidan Zhang,Run the script initialise_CASPR.m from the root directory. This will test the installation and confirm that CASPR is ready to be run.
-103,https://github.com/microsoft/tensorwatch,Yidan Zhang,pip install tensorwatch
-104,https://github.com/google/TensorNetwork,Yidan Zhang,pip3 install tensornetwork
-105,https://github.com/fastai/fastai,Ling Li,You can install fastai on your own machines with conda (highly recommended). If you're using Anaconda then run:
-106,https://github.com/fastai/fastai,Ling Li,conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
-107,https://github.com/fastai/fastai,Ling Li,...or if you're using miniconda) then run:
-108,https://github.com/fastai/fastai,Ling Li,conda install -c fastai -c pytorch fastai
-109,https://github.com/fastai/fastai,Ling Li,"To install with pip, use: pip install fastai."
-110,https://github.com/fastai/fastai,Ling Li,"If you install with pip, you should install PyTorch first by following the PyTorch installation instructions."
-111,https://github.com/fastai/fastai,Ling Li,"If you plan to develop fastai yourself, or want to be on the cutting edge, you can use an editable install"
-112,https://github.com/fastai/fastai,Ling Li,"(if you do this, you should also use an editable install of fastcore to go with it.):"
-113,https://github.com/fastai/fastai,Ling Li,git clone https://github.com/fastai/fastai
-114,https://github.com/fastai/fastai,Ling Li,"pip install -e ""fastai[dev]"""
-115,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Installation, Reinstallation and Uninstallation"
-116,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Windows portable version: Simply download and use the latest version from the Releases section.
-117,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Otherwise, check doc/installation.md for instructions on how to build OpenPose from source."
-118,https://github.com/emilwallner/Screenshot-to-code,Ling Li,Click this button to open a Workspace on FloydHub where you will find the same environment and dataset used for the Bootstrap version.
-119,https://github.com/emilwallner/Screenshot-to-code,Ling Li,You can also find the trained models for testing.
-120,https://github.com/emilwallner/Screenshot-to-code,Ling Li,Local
-121,https://github.com/emilwallner/Screenshot-to-code,Ling Li,pip install keras tensorflow pillow h5py jupyter
-122,https://github.com/emilwallner/Screenshot-to-code,Ling Li,git clone https://github.com/emilwallner/Screenshot-to-code.git
-123,https://github.com/emilwallner/Screenshot-to-code,Ling Li,cd Screenshot-to-code/
-124,https://github.com/emilwallner/Screenshot-to-code,Ling Li,jupyter notebook
-125,https://github.com/emilwallner/Screenshot-to-code,Ling Li,"Go do the desired notebook, files that end with '.ipynb'. To run the model, go to the menu then click on Cell > Run all"
-126,https://github.com/deepmind/sonnet,Ling Li,To get started install TensorFlow 2.0 and Sonnet 2:
-127,https://github.com/deepmind/sonnet,Ling Li,$ pip install tensorflow-gpu tensorflow-probability
-128,https://github.com/deepmind/sonnet,Ling Li,$ pip install dm-sonnet
-129,https://github.com/deepmind/sonnet,Ling Li,You can run the following to verify things installed correctly:
-130,https://github.com/deepmind/sonnet,Ling Li,import tensorflow as tf
-131,https://github.com/deepmind/sonnet,Ling Li,import sonnet as snt
-132,https://github.com/deepmind/sonnet,Ling Li,"print(""TensorFlow version {}"".format(tf.__version__))"
-133,https://github.com/deepmind/sonnet,Ling Li,"print(""Sonnet version {}"".format(snt.__version__))"
-134,https://github.com/JaidedAI/EasyOCR,Ling Li,"Install using pip for stable release,"
-135,https://github.com/JaidedAI/EasyOCR,Ling Li,pip install easyocr
-136,https://github.com/JaidedAI/EasyOCR,Ling Li,"For latest development release,"
-137,https://github.com/JaidedAI/EasyOCR,Ling Li,pip install git+git://github.com/jaidedai/easyocr.git
-138,https://github.com/JaidedAI/EasyOCR,Ling Li,"Note 1: for Windows, please install torch and torchvision first by following the official instruction here https://pytorch.org."
-139,https://github.com/JaidedAI/EasyOCR,Ling Li,"On pytorch website, be sure to select the right CUDA version you have."
-140,https://github.com/JaidedAI/EasyOCR,Ling Li,"If you intend to run on CPU mode only, select CUDA = None."
-141,https://github.com/JaidedAI/EasyOCR,Ling Li,Note 2: We also provide Dockerfile here.
-142,https://github.com/airbnb/airpal,Yi Xie,Java 7 or higher
-143,https://github.com/airbnb/airpal,Yi Xie,MySQL database
-144,https://github.com/airbnb/airpal,Yi Xie,Presto 0.77 or higher
-145,https://github.com/airbnb/airpal,Yi Xie,S3 bucket (to store CSVs)
-146,https://github.com/airbnb/airpal,Yi Xie,Gradle 2.2 or higher
-147,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Envision.js ships with all it's dependencies. It uses:
-148,https://github.com/HumbleSoftware/envisionjs,Yi Xie,underscore.js
-149,https://github.com/HumbleSoftware/envisionjs,Yi Xie,bean
-150,https://github.com/HumbleSoftware/envisionjs,Yi Xie,bonzo
-151,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Flotr2
-152,https://github.com/apache/incubator-echarts,Yi Xie,You may choose one of the following methods:
-153,https://github.com/apache/incubator-echarts,Yi Xie,Download from Official Website in 中文下载页
-154,https://github.com/apache/incubator-echarts,Yi Xie,Download from Official Website in English
-155,https://github.com/apache/incubator-echarts,Yi Xie,npm install echarts --save
-156,https://github.com/apache/incubator-echarts,Yi Xie,CDN: jsDelivr CDN
-157,https://github.com/vega/vega,Yi Xie,Clone https://github.com/vega/vega.
-158,https://github.com/vega/vega,Yi Xie,"Run yarn to install dependencies for all packages. If you don't have yarn installed, see https://yarnpkg.com/en/docs/install. We use Yarn workspaces to manage multiple packages within this monorepo."
-159,https://github.com/Codecademy/EventHub,Yi Xie,"Developers who want to try EventHub can quickly set the server up on Heroku with the following commands. However, please be aware that Heroku's file system is ephemeral and your data will be wiped after the instance is closed."
-160,https://github.com/Codecademy/EventHub,Yi Xie,git clone https://github.com/Codecademy/EventHub.git
-161,https://github.com/Codecademy/EventHub,Yi Xie,cd EventHub
-162,https://github.com/Codecademy/EventHub,Yi Xie,heroku create
-163,https://github.com/Codecademy/EventHub,Yi Xie,git push heroku master
-164,https://github.com/Codecademy/EventHub,Yi Xie,heroku open
-165,https://github.com/Codecademy/EventHub,Yi Xie,Required dependencies
-166,https://github.com/Codecademy/EventHub,Yi Xie,java sdk7
-167,https://github.com/Codecademy/EventHub,Yi Xie,maven
+1005,https://github.com/NicolasHug/Surprise,Pratheek,$ pip install numpy cython
+1006,https://github.com/NicolasHug/Surprise,Pratheek,$ git clone https://github.com/NicolasHug/surprise.git
+1007,https://github.com/NicolasHug/Surprise,Pratheek,$ cd surprise
+1008,https://github.com/NicolasHug/Surprise,Pratheek,$ python setup.py install
+1009,https://github.com/amitt001/delegator.py,Pratheek,$ pip install delegator.py
+1010,,,
+1011,https://github.com/simbody/simbody,Yidan Zhang,"In this file, we provide instructions for 6 different ways of installing Simbody:"
+1012,https://github.com/simbody/simbody,Yidan Zhang,Windows: build from source using Microsoft Visual Studio.
+1013,https://github.com/simbody/simbody,Yidan Zhang,Linux or Mac (make): build from source using gcc or Clang with make.
+1014,https://github.com/simbody/simbody,Yidan Zhang,Mac (Homebrew): automated build/install with Homebrew.
+1015,https://github.com/simbody/simbody,Yidan Zhang,Ubuntu/Debian: install pre-built binaries with apt-get.
+1016,https://github.com/simbody/simbody,Yidan Zhang,FreeBSD: install pre-built binaries with pkg.
+1017,https://github.com/simbody/simbody,Yidan Zhang,Windows using MinGW: build from source using MinGW.
+1018,https://github.com/simbody/simbody,Yidan Zhang,Windows/Mac/Linux: install pre-built binaries with the Conda package manager.
+1019,https://github.com/simbody/simbody,Yidan Zhang,"If you use Linux, check Repology to see if your distribution provides a package for Simbody."
+1020,https://github.com/simbody/simbody,Yidan Zhang,"These are not the only ways to install Simbody, however. For example, on a Mac, you could use CMake and Xcode."
+1021,https://github.com/cyverse/atmosphere,Yidan Zhang,Install the required python packages
+1022,https://github.com/cyverse/atmosphere,Yidan Zhang,pip install -r requirements.txt
+1023,https://github.com/cyverse/atmosphere,Yidan Zhang,A separate environment is provided for developers
+1024,https://github.com/cyverse/atmosphere,Yidan Zhang,pip install -r dev_requirements.txt
+1025,https://github.com/darwinlau/CASPR,Yidan Zhang,There are two ways to download CASPR to your computer:
+1026,https://github.com/darwinlau/CASPR,Yidan Zhang,[READ-ONLY ACCESS] - git clone https://github.com/darwinlau/CASPR.git
+1027,https://github.com/darwinlau/CASPR,Yidan Zhang,[READ-CONTRIBUTE ACCESS] - Fork the CASPR repository onto your github account and then clone the new repository. git clone https://github.com/YOUR_USER_NAME/CASPR.git
+1028,https://github.com/darwinlau/CASPR,Yidan Zhang,Note: For additional information regarding forking on github please refer to https://help.github.com/articles/fork-a-repo/
+1029,https://github.com/darwinlau/CASPR,Yidan Zhang,(Optionally) install the CASPR depedencies. See Dependency Installation for further details
+1030,https://github.com/darwinlau/CASPR,Yidan Zhang,Open MATLAB and change the file path to be that of the extracted CASPR root directory.
+1031,https://github.com/darwinlau/CASPR,Yidan Zhang,Run the script initialise_CASPR.m from the root directory. This will test the installation and confirm that CASPR is ready to be run.
+1032,https://github.com/microsoft/tensorwatch,Yidan Zhang,pip install tensorwatch
+1033,https://github.com/google/TensorNetwork,Yidan Zhang,pip3 install tensornetwork
+1034,https://github.com/fastai/fastai,Ling Li,You can install fastai on your own machines with conda (highly recommended). If you're using Anaconda then run:
+1035,https://github.com/fastai/fastai,Ling Li,conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
+1036,https://github.com/fastai/fastai,Ling Li,...or if you're using miniconda) then run:
+1037,https://github.com/fastai/fastai,Ling Li,conda install -c fastai -c pytorch fastai
+1038,https://github.com/fastai/fastai,Ling Li,"To install with pip, use: pip install fastai."
+1039,https://github.com/fastai/fastai,Ling Li,"If you install with pip, you should install PyTorch first by following the PyTorch installation instructions."
+1040,https://github.com/fastai/fastai,Ling Li,"If you plan to develop fastai yourself, or want to be on the cutting edge, you can use an editable install"
+1041,https://github.com/fastai/fastai,Ling Li,"(if you do this, you should also use an editable install of fastcore to go with it.):"
+1042,https://github.com/fastai/fastai,Ling Li,git clone https://github.com/fastai/fastai
+1043,https://github.com/fastai/fastai,Ling Li,"pip install -e ""fastai[dev]"""
+1044,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Installation, Reinstallation and Uninstallation"
+1045,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,Windows portable version: Simply download and use the latest version from the Releases section.
+1046,https://github.com/CMU-Perceptual-Computing-Lab/openpose,Ling Li,"Otherwise, check doc/installation.md for instructions on how to build OpenPose from source."
+1047,https://github.com/emilwallner/Screenshot-to-code,Ling Li,Click this button to open a Workspace on FloydHub where you will find the same environment and dataset used for the Bootstrap version.
+1048,https://github.com/emilwallner/Screenshot-to-code,Ling Li,You can also find the trained models for testing.
+1049,https://github.com/emilwallner/Screenshot-to-code,Ling Li,Local
+1050,https://github.com/emilwallner/Screenshot-to-code,Ling Li,pip install keras tensorflow pillow h5py jupyter
+1051,https://github.com/emilwallner/Screenshot-to-code,Ling Li,git clone https://github.com/emilwallner/Screenshot-to-code.git
+1052,https://github.com/emilwallner/Screenshot-to-code,Ling Li,cd Screenshot-to-code/
+1053,https://github.com/emilwallner/Screenshot-to-code,Ling Li,jupyter notebook
+1054,https://github.com/emilwallner/Screenshot-to-code,Ling Li,"Go do the desired notebook, files that end with '.ipynb'. To run the model, go to the menu then click on Cell > Run all"
+1055,https://github.com/deepmind/sonnet,Ling Li,To get started install TensorFlow 2.0 and Sonnet 2:
+1056,https://github.com/deepmind/sonnet,Ling Li,$ pip install tensorflow-gpu tensorflow-probability
+1057,https://github.com/deepmind/sonnet,Ling Li,$ pip install dm-sonnet
+1058,https://github.com/deepmind/sonnet,Ling Li,You can run the following to verify things installed correctly:
+1059,https://github.com/deepmind/sonnet,Ling Li,import tensorflow as tf
+1060,https://github.com/deepmind/sonnet,Ling Li,import sonnet as snt
+1061,https://github.com/deepmind/sonnet,Ling Li,"print(""TensorFlow version {}"".format(tf.__version__))"
+1062,https://github.com/deepmind/sonnet,Ling Li,"print(""Sonnet version {}"".format(snt.__version__))"
+1063,https://github.com/JaidedAI/EasyOCR,Ling Li,"Install using pip for stable release,"
+1064,https://github.com/JaidedAI/EasyOCR,Ling Li,pip install easyocr
+1065,https://github.com/JaidedAI/EasyOCR,Ling Li,"For latest development release,"
+1066,https://github.com/JaidedAI/EasyOCR,Ling Li,pip install git+git://github.com/jaidedai/easyocr.git
+1067,https://github.com/JaidedAI/EasyOCR,Ling Li,"Note 1: for Windows, please install torch and torchvision first by following the official instruction here https://pytorch.org."
+1068,https://github.com/JaidedAI/EasyOCR,Ling Li,"On pytorch website, be sure to select the right CUDA version you have."
+1069,https://github.com/JaidedAI/EasyOCR,Ling Li,"If you intend to run on CPU mode only, select CUDA = None."
+1070,https://github.com/JaidedAI/EasyOCR,Ling Li,Note 2: We also provide Dockerfile here.
+1071,https://github.com/airbnb/airpal,Yi Xie,Java 7 or higher
+1072,https://github.com/airbnb/airpal,Yi Xie,MySQL database
+1073,https://github.com/airbnb/airpal,Yi Xie,Presto 0.77 or higher
+1074,https://github.com/airbnb/airpal,Yi Xie,S3 bucket (to store CSVs)
+1075,https://github.com/airbnb/airpal,Yi Xie,Gradle 2.2 or higher
+1076,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Envision.js ships with all it's dependencies. It uses:
+1077,https://github.com/HumbleSoftware/envisionjs,Yi Xie,underscore.js
+1078,https://github.com/HumbleSoftware/envisionjs,Yi Xie,bean
+1079,https://github.com/HumbleSoftware/envisionjs,Yi Xie,bonzo
+1080,https://github.com/HumbleSoftware/envisionjs,Yi Xie,Flotr2
+1081,https://github.com/apache/incubator-echarts,Yi Xie,You may choose one of the following methods:
+1082,https://github.com/apache/incubator-echarts,Yi Xie,Download from Official Website in 中文下载页
+1083,https://github.com/apache/incubator-echarts,Yi Xie,Download from Official Website in English
+1084,https://github.com/apache/incubator-echarts,Yi Xie,npm install echarts --save
+1085,https://github.com/apache/incubator-echarts,Yi Xie,CDN: jsDelivr CDN
+1086,https://github.com/vega/vega,Yi Xie,Clone https://github.com/vega/vega.
+1087,https://github.com/vega/vega,Yi Xie,"Run yarn to install dependencies for all packages. If you don't have yarn installed, see https://yarnpkg.com/en/docs/install. We use Yarn workspaces to manage multiple packages within this monorepo."
+1088,https://github.com/Codecademy/EventHub,Yi Xie,"Developers who want to try EventHub can quickly set the server up on Heroku with the following commands. However, please be aware that Heroku's file system is ephemeral and your data will be wiped after the instance is closed."
+1089,https://github.com/Codecademy/EventHub,Yi Xie,git clone https://github.com/Codecademy/EventHub.git
+1090,https://github.com/Codecademy/EventHub,Yi Xie,cd EventHub
+1091,https://github.com/Codecademy/EventHub,Yi Xie,heroku create
+1092,https://github.com/Codecademy/EventHub,Yi Xie,git push heroku master
+1093,https://github.com/Codecademy/EventHub,Yi Xie,heroku open
+1094,https://github.com/Codecademy/EventHub,Yi Xie,Required dependencies
+1095,https://github.com/Codecademy/EventHub,Yi Xie,java sdk7
+1096,https://github.com/Codecademy/EventHub,Yi Xie,maven
