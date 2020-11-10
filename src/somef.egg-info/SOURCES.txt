@@ -7,6 +7,7 @@ src/somef/cli.py
 src/somef/configuration.py
 src/somef/createExcerpts.py
 src/somef/data_to_graph.py
+src/somef/function.py
 src/somef/header_analysis.py
 src/somef.egg-info/PKG-INFO
 src/somef.egg-info/SOURCES.txt

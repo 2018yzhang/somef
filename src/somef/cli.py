@@ -25,6 +25,8 @@ from somef.data_to_graph import DataGraph
 
 from . import createExcerpts
 from . import header_analysis
+from . import function
+
 
 import time
 
@@ -384,9 +386,9 @@ def format_output(git_data, repo_data):
 # saves the final json Object in the file
 def save_json_output(repo_data, outfile):
     print("Saving json data to", outfile)
+    repo_data = function.pass_data(repo_data)
     with open(outfile, 'w') as output:
         json.dump(repo_data, output)
-
     ## Function takes metadata, readme text predictions, bibtex citations and path to the output file
 
 
